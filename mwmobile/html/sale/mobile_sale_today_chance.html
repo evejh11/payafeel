@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>APmall</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="subject" content="">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="build" content="">
+<meta name="language" content="ko">
+<meta name="author" content="">
+<meta name="copyright" content="2017 (주)아모레퍼시픽">
+<meta name="reply-to" content="amorepacific@amorepacific.co.kr">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/slick.css" media="screen">
+<link rel="stylesheet" href="../../css/common.css" media="screen">
+<link rel="stylesheet" href="../../css/content.css" media="screen">
+<link rel="stylesheet" href="../../css/popup.css" media="screen">
+<link rel="stylesheet" href="../../css/other.css" media="screen">
+<link rel="stylesheet" href="../../css/camp.css" media="screen">
+<link rel="stylesheet" href="../../css/renew2017.css" media="screen"><!-- 리뉴얼 css -->
+<link rel="stylesheet" href="../../css/renew2017_pop.css" media="screen"><!-- 리뉴얼 css -->
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- WRAP -->
+	<div id="wrap">
+		<!-- HEADER -->
+		<!-- [D] 헤더 타입 구분 (미확정)
+			기본 : <header>
+			탭(플리킹) : <header class="unfixed">  -->
+		<header>
+			<div class="header_box">
+				<div class="lft_area">
+					<h1 class="logo"><a href="/"><img src="../../images/renew/common/logo_apmall.png" alt="Apmall"></a></h1>
+					<!--<button type="button" class="btn_back"><i class="i-global back">뒤로</i></button>-->
+					<button type="button" class="btn_side" id="btnSideNav"><i class="i-global list">메뉴</i></button>
+				</div>
+
+				<button type="button" class="btn_srch" id="btnSrch"><i class="i-global srch">검색</i></button>
+				<a href="#none" class="btn_cart"><i class="i-global cart">장바구니</i> <span class="item">10</span></a>
+			</div>
+		</header><!-- //HEADER -->
+		
+		<!-- CONTAINER -->
+		<!-- [D] 운영 기존 흰 배경 유지 / 리뉴얼만 배경색 지정 (예외가 필요한 부분은 순차적으로 개발 변경될 가능성 있음)
+			<div id="container" class="ctr_renew"> -->
+		<div id="container" class="ctr_renew">
+			<!-- GROUP : HEADER -->
+			<div class="gnb_grphd">
+				<!-- [D] 3depth (2depth로 이동) -->
+				<h2 class="h"><a href="#none"><span>뷰티테스터</span></a></h2>
+				<ul class="nav_mcate">
+					<li><input type="radio" id="grphd1" style="display:none;"><label for="grphd1">이달의 리본박스</label></li>
+					<li><input type="radio" id="grphd2" style="display:none;"><label for="grphd2">기프트카드</label></li>
+					<li><input type="radio" id="grphd3" style="display:none;"><label for="grphd3">지난 리본박스</label></li>
+					<li><input type="radio" id="grphd4" style="display:none;"><label for="grphd4">투데이핫딜</label></li>
+					<li><input type="radio" id="grphd5" style="display:none;"><label for="grphd5">뷰티 프로포즈</label></li>
+					<li><input type="radio" id="grphd6" style="display:none;"><label for="grphd6">CLUB AP</label></li>
+					<li><input type="radio" id="grphd7" style="display:none;"><label for="grphd7">블루리본 스토어</label></li>
+				</ul>
+			</div><!-- //GROUP : HEADER -->
+
+			<!-- CONTENT -->
+			<div id="content">
+				<div class="todayChance">
+					<section class="todayChanceList">
+						<h1 class="hide">투데이찬스 목록</h1>
+						<div class="tcBox">
+							<div class="sec1">
+								<div class="timeArea">
+									<!--<p class="ttl">현재 진행중인 상품 <span class="hide">남은 시간</span></p>-->
+									<div class="time">
+										<span class="ti"><em id="deadTime_h1_DOF20170516000003125" class="num deadTime_h1">0</em><em id="deadTime_h2_DOF20170516000003125" class="num deadTime_h2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_m1_DOF20170516000003125" class="num deadTime_m1">0</em><em id="deadTime_m2_DOF20170516000003125" class="num deadTime_m2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_s1_DOF20170516000003125" class="num deadTime_s1">0</em><em id="deadTime_s2_DOF20170516000003125" class="num deadTime_s2">0</em></span>
+										<span class="hide span_stDt">20171101000000</span>
+										<span class="hide span_enDt">20181101235959</span>
+										<span class="hide span_dayoff">DOF20170516000003125</span>
+									</div>
+								</div>
+								<div class="salePercent">
+									<em id="odometer1" class="odometer">00</em>
+									<span>%</span>
+									<script type="text/javascript">
+									setTimeout(function() {
+										$("#odometer" + "1").html("0");
+									}, "1" * 500);
+									</script>
+									<span class="hide span_discount"></span>
+								</div>
+							</div>
+							<div class="sec2">
+								<span class="ico_flag f3"> 남은수량 : 100 개</span>
+								<a href="#" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20161228000025920');">
+									<p class="img"><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C020/201612/IMG1482cEJ914711860.jpg" id="SPR20161228000025920" class="btn_Detail" alt="" /></p>
+								</a>
+							</div>
+							<div class="sec3">
+								<div class="ttlbox">
+									<p class="prodNm"><a href="#" id="SPR20161228000025920" class="btn_Detail" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20161228000025920');">[헤라] [리미티드] 미스트 쿠션 블러셔</a></p>
+									<p class="priceZone">
+										<span class="price"><em>38,000</em>원</span>
+									</p>
+								</div>
+								<div class="btnArea2">
+									<span class="btn_ty v5 btn_purch" id="SPR20161228000025920/111071022"><a href="#">구매하기</a></span>
+									<span class="btn_ty3 v5 btn_basket" id="SPR20161228000025920/111071022/100"><a href="#">장바구니</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="tcBox">
+							<div class="sec1">
+								<div class="timeArea">
+									<p class="ttl">현재 진행중인 상품 <span class="hide">남은 시간</span></p>
+									<div class="time">
+										<span class="ti"><em id="deadTime_h1_DOF20170516000003125" class="num deadTime_h1">0</em><em id="deadTime_h2_DOF20170516000003125" class="num deadTime_h2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_m1_DOF20170516000003125" class="num deadTime_m1">0</em><em id="deadTime_m2_DOF20170516000003125" class="num deadTime_m2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_s1_DOF20170516000003125" class="num deadTime_s1">0</em><em id="deadTime_s2_DOF20170516000003125" class="num deadTime_s2">0</em></span>
+										<span class="hide span_stDt">20171101000000</span>
+										<span class="hide span_enDt">20181101235959</span>
+										<span class="hide span_dayoff">DOF20170516000003125</span>
+									</div>
+								</div>
+								<div class="salePercent">
+									<em id="odometer2" class="odometer">00</em>
+									<span>%</span>
+									<script type="text/javascript">
+									setTimeout(function() {
+										$("#odometer" + "2").html("0");
+									}, "2" * 500);
+									</script>
+									<span class="hide span_discount"></span>
+								</div>
+							</div>
+							<div class="sec2">
+								<span class="ico_flag f3"> 남은수량 : 10 개</span>
+								<a href="#" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170417000028910');">
+									<p class="img"><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C020/201704/IMG1492PoW417225627.jpg" id="SPR20170417000028910" class="btn_Detail" alt="" /></p>
+								</a>
+							</div>
+							<div class="sec3">
+								<div class="ttlbox">
+									<p class="prodNm"><a href="#" id="SPR20170417000028910" class="btn_Detail" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170417000028910');">[마몽드]  브라이트닝 커버 워터리 쿠션 </a></p>
+									<p class="priceZone">
+										<span class="price"><em>20,000</em>원</span>
+									</p>
+								</div>
+								<div class="btnArea2">
+									<span class="btn_ty v5 btn_purch" id="SPR20170417000028910/110650456"><a href="#">구매하기</a></span>
+									<span class="btn_ty3 v5 btn_basket" id="SPR20170417000028910/110650456/10"><a href="#">장바구니</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="tcBox">
+							<div class="sec1">
+								<div class="timeArea">
+									<p class="ttl">현재 진행중인 상품 <span class="hide">남은 시간</span></p>
+									<div class="time">
+										<span class="ti"><em id="deadTime_h1_DOF20170516000003125" class="num deadTime_h1">0</em><em id="deadTime_h2_DOF20170516000003125" class="num deadTime_h2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_m1_DOF20170516000003125" class="num deadTime_m1">0</em><em id="deadTime_m2_DOF20170516000003125" class="num deadTime_m2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_s1_DOF20170516000003125" class="num deadTime_s1">0</em><em id="deadTime_s2_DOF20170516000003125" class="num deadTime_s2">0</em></span>
+										<span class="hide span_stDt">20171101000000</span>
+										<span class="hide span_enDt">20181101235959</span>
+										<span class="hide span_dayoff">DOF20170516000003125</span>
+									</div>
+								</div>
+								<div class="salePercent">
+									<em id="odometer3" class="odometer">00</em>
+									<span>%</span>
+									<script type="text/javascript">
+									setTimeout(function() {
+										$("#odometer" + "3").html("50");
+									}, "3" * 500);
+									</script>
+									<span class="hide span_discount"></span>
+								</div>
+							</div>
+							<div class="sec2">
+								<span class="ico_flag f3"> 남은수량 : 10 개</span>
+								<a href="#" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170518000016523');">
+									<p class="img"><img src="http://dev.amorepacificmall.co.kr/UPLOAD/UPLOAD_IMAGE/C020/201705/IMG1495gUE075139206.jpg" id="SPR20170518000016523" class="btn_Detail" alt="" /></p>
+								</a>
+							</div>
+							<div class="sec3">
+								<div class="ttlbox">
+									<p class="prodNm"><a href="#" id="SPR20170518000016523" class="btn_Detail" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170518000016523');">[일리] 세라마이드 아토 크림</a></p>
+									<p class="priceZone">
+										<span class="sale"><em>20,000</em>원</span>
+										<span class="price"><em>10,000</em>원</span>
+									</p>
+								</div>
+								<div class="btnArea2">
+									<span class="btn_ty v5 btn_purch" id="SPR20170518000016523/111270078"><a href="#">구매하기</a></span>
+									<span class="btn_ty3 v5 btn_basket" id="SPR20170518000016523/111270078/10"><a href="#">장바구니</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="tcBox">
+							<div class="sec1">
+								<div class="timeArea">
+									<p class="ttl">현재 진행중인 상품 <span class="hide">남은 시간</span></p>
+									<div class="time">
+										<span class="ti"><em id="deadTime_h1_DOF20170516000003125" class="num deadTime_h1">0</em><em id="deadTime_h2_DOF20170516000003125" class="num deadTime_h2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_m1_DOF20170516000003125" class="num deadTime_m1">0</em><em id="deadTime_m2_DOF20170516000003125" class="num deadTime_m2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_s1_DOF20170516000003125" class="num deadTime_s1">0</em><em id="deadTime_s2_DOF20170516000003125" class="num deadTime_s2">0</em></span>
+										<span class="hide span_stDt">20171101000000</span>
+										<span class="hide span_enDt">20181101235959</span>
+										<span class="hide span_dayoff">DOF20170516000003125</span>
+									</div>
+								</div>
+								<div class="salePercent">
+									<em id="odometer4" class="odometer">00</em>
+									<span>%</span>
+									<script type="text/javascript">
+									setTimeout(function() {
+										$("#odometer" + "4").html("0");
+									}, "4" * 500);
+									</script>
+									<span class="hide span_discount"></span>
+								</div>
+							</div>
+							<div class="sec2">
+								<span class="ico_flag f3"> 남은수량 : 10 개</span>
+								<a href="#" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170428000029180');">
+									<p class="img"><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C020/201705/IMG1493TnK698389359.jpg" id="SPR20170428000029180" class="btn_Detail" alt="" /></p>
+								</a>
+							</div>
+							<div class="sec3">
+								<div class="ttlbox">
+									<p class="prodNm"><a href="#" id="SPR20170428000029180" class="btn_Detail" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170428000029180');">[려] [홍지윤 콜라보] 자양윤모 샴푸 기획세트</a></p>
+									<p class="priceZone">
+										<span class="price"><em>32,000</em>원</span>
+									</p>
+								</div>
+								<div class="btnArea2">
+									<span class="btn_ty v5 btn_purch" id="SPR20170428000029180/111411622"><a href="#">구매하기</a></span>
+									<span class="btn_ty3 v5 btn_basket" id="SPR20170428000029180/111411622/10"><a href="#">장바구니</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="tcBox">
+							<div class="sec1">
+								<div class="timeArea">
+									<p class="ttl">현재 진행중인 상품 <span class="hide">남은 시간</span></p>
+									<div class="time">
+										<span class="ti"><em id="deadTime_h1_DOF20170516000003125" class="num deadTime_h1">0</em><em id="deadTime_h2_DOF20170516000003125" class="num deadTime_h2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_m1_DOF20170516000003125" class="num deadTime_m1">0</em><em id="deadTime_m2_DOF20170516000003125" class="num deadTime_m2">0</em></span>
+										<span class="term"></span>
+										<span class="ti"><em id="deadTime_s1_DOF20170516000003125" class="num deadTime_s1">0</em><em id="deadTime_s2_DOF20170516000003125" class="num deadTime_s2">0</em></span>
+										<span class="hide span_stDt">20171101000000</span>
+										<span class="hide span_enDt">20181101235959</span>
+										<span class="hide span_dayoff">DOF20170516000003125</span>
+									</div>
+								</div>
+								<div class="salePercent">
+									<em id="odometer5" class="odometer">00</em>
+									<span>%</span>
+									<script type="text/javascript">
+									setTimeout(function() {
+										$("#odometer" + "5").html("0");
+									}, "5" * 500);
+									</script>
+									<span class="hide span_discount"></span>
+								</div>
+							</div>
+							<div class="sec2">
+								<span class="ico_flag f3"> 남은수량 : 10 개</span>
+								<a href="#" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170428000029178');">
+									<p class="img"><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C020/201705/IMG1493omO698365331.jpg" id="SPR20170428000029178" class="btn_Detail" alt="" /></p>
+								</a>
+							</div>
+							<div class="sec3">
+								<div class="ttlbox">
+									<p class="prodNm"><a href="#" id="SPR20170428000029178" class="btn_Detail" onclick="trackClicksMall('상품','모바일 투데이찬스^상품 리스트','투데이찬스 상품 상세','event5',true,'SPR20170428000029178');">[려] [홍지윤 콜라보] 함빛 기획세트</a></p>
+									<p class="priceZone">
+										<span class="price"><em>30,000</em>원</span>
+									</p>
+								</div>
+								<div class="btnArea2">
+									<span class="btn_ty v5 btn_purch" id="SPR20170428000029178/111411620"><a href="#">구매하기</a></span>
+									<span class="btn_ty3 v5 btn_basket" id="SPR20170428000029178/111411620/10"><a href="#">장바구니</a></span>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="comingList">
+						<h1 class="title">커밍쑨 상품 <span>COMING SOON</span></h1>
+						<div class="nodata">
+							<p class="sp_bg s5">원하시는 내용을 찾을수가 없어요.
+								<br/>다른 검색어로 검색해주시겠어요?</p>
+						</div>
+					</section>
+				</div>
+			</div><!-- //CONTENT -->
+		</div><!-- //CONTAINER -->
+
+		<!-- FOOTER -->
+		<footer>
+			<ul class="links top">
+				<li><a href="#none">로그인</a></li>
+				<li><a href="#none">고객센터</a></li>
+			</ul>
+
+			<div class="info_wrap">
+				<button type="button" class="btn_info">(주)아모레퍼시픽 사업자 정보</button>
+
+				<div class="view">
+					<p>
+						(주)아모레퍼시픽 대표이사 : 심상배<br>
+						전자메일주소 : <a href="mailto:apmall_support@amorepacificmall.com">apmall_support@amorepacificmall.com</a><br>
+						서울시 중구 청계천로 100 시그니쳐타워 서관 5~13층
+					</p>
+					<p>
+						호스팅제공자 : (주)아모레퍼시픽 / 사업자등록번호 : 107-86-43373<br>
+						통신판매업신고번호 : 서울중구-0408호(서울 중구청),<br>
+						건강기능식품판매업 영업신고증 제8호
+					</p>
+
+					<p>
+						배송, 사이트 관련 문의 고객센터 <strong><a href="tel:080-030-5454" class="needsclick">080-030-5454</a></strong> (수신자요금부담)<br>
+						평일 09:00~17:00 / 점심 12:00~13:00 (토,일,공휴일 휴무)
+					</p>
+					<p>
+						제품, 트러블 관련 문의 고객센터 <strong><a href="tel:080-023-5454" class="needsclick">080-023-5454</a></strong> (수신자요금부담)<br>
+						월~목 09:00~21:00 / 금 09:00~17:30 (토,일,공휴일 휴무)
+					</p>
+
+					<div class="btns">
+						<a href="#none" class="btn_cs">실시간 고객상담</a>
+					</div>
+				</div>
+			</div>
+
+			<p>고객님의 안전거래를 위해 현금 거래에 대해<br>LG U+의 구매안전 서비스를 이용하실 수 있습니다.</p>
+
+			<div class="btns_area">
+				<a href="#none" class="btn_lg">LG U+ 구매안전 서비스 가입확인</a>
+			</div>
+
+			<ul class="links">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+				<li><a href="#">사업자정보확인</a></li>
+			</ul>
+
+			<p class="copyright">&copy; AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED</p>
+		</footer><!-- //FOOTER -->
+		
+		<!-- 퀵버튼 -->
+		<div class="quick">
+			<a href="#wrap" class="btn_top"><img src="../../images/renew/common/btn_top.png" alt="최상단으로 이동"></a>
+			<button type="button" class="btn_recent" onclick="modalPopup('#modalrecentLst');return false;"><img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명"></button>
+		</div><!-- //퀵버튼 -->
+	</div><!-- WRAP -->
+</div><!-- //WRAPPER -->
+
+<!-- 최근 본 상품 팝업 팝업 : s -->
+<div id="modalrecentLst" class="modal-wrap v2">
+	<section class="modal-content">
+		<h1 class="blind">최근본 상품</h1>
+		<div class="content">
+			<section class="fg_recent" id="recentLst">
+				<strong class="h">최근본 상품</strong>
+
+				<div class="scrlable_x">
+					<ul class="list_recent">
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명">
+								<span class="date">08.14</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_02.jpg" alt="상품명">
+								<span class="date">08.13</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_03.jpg" alt="상품명">
+								<span class="date">08.12</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_04.jpg" alt="상품명">
+								<span class="date">08.11</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명">
+								<span class="date">08.10</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_02.jpg" alt="상품명">
+								<span class="date">08.09</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_03.jpg" alt="상품명">
+								<span class="date">08.08</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_04.jpg" alt="상품명">
+								<span class="date">08.07</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<a href="#none" class="btn_all">전체보기 <i class="i-arr v1-r"></i></a>
+			</section>
+		</div>
+	</section>
+
+	<button type="button" class="btn_modalpopupClose" onclick="modalPopupClose('#modalrecentLst');return false;"></button>
+</div>
+<!-- //최근 본 상품 팝업 : e -->
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/swipe.js"></script>
+<script type="text/javascript" src="../../js/iscroll.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript" src="../../js/select.js"></script>
+<script type="text/javascript" src="../../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../../js/slick.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.lazyload.min.js?v=1.9.1"></script>
+<script type="text/javascript" src="../../js/jquery.scrollstop.min.js"></script>
+<script type="text/javascript" src="../../js/renew2017.js"></script><!-- 리뉴얼 js -->
+</body>
+</html>

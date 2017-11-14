@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>APmall</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="subject" content="">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="build" content="">
+<meta name="language" content="ko">
+<meta name="author" content="">
+<meta name="copyright" content="2017 (주)아모레퍼시픽">
+<meta name="reply-to" content="amorepacific@amorepacific.co.kr">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/slick.css" media="screen">
+<link rel="stylesheet" href="../../css/common.css" media="screen">
+<link rel="stylesheet" href="../../css/content.css" media="screen">
+<link rel="stylesheet" href="../../css/popup.css" media="screen">
+<link rel="stylesheet" href="../../css/other.css" media="screen">
+<link rel="stylesheet" href="../../css/camp.css" media="screen">
+<link rel="stylesheet" href="../../css/renew2017.css" media="screen"><!-- 리뉴얼 css -->
+<link rel="stylesheet" href="../../css/renew2017_pop.css" media="screen"><!-- 리뉴얼 css -->
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- WRAP -->
+	<div id="wrap">
+		<!-- HEADER -->
+		<header>
+			<div class="header_box">
+				<div class="lft_area">
+					<h1 class="logo"><a href="/"><img src="../../images/renew/common/logo_apmall.png" alt="Apmall"></a></h1>
+					<!--<button type="button" class="btn_back"><i class="i-global back">뒤로</i></button>-->
+					<button type="button" class="btn_side" id="btnSideNav"><i class="i-global list">메뉴</i></button>
+				</div>
+
+				<button type="button" class="btn_srch" id="btnSrch"><i class="i-global srch">검색</i></button>
+				<a href="#none" class="btn_cart"><i class="i-global cart">장바구니</i> <span class="item">10</span></a>
+			</div>
+		</header><!-- //HEADER -->
+		
+		<!-- CONTAINER -->
+		<!-- [D] 운영 기존 흰 배경 유지 / 리뉴얼만 배경색 지정 (예외가 필요한 부분은 순차적으로 개발 변경될 가능성 있음)
+			<div id="container" class="ctr_renew"> -->
+		<div id="container" class="ctr_renew">
+			<!-- GROUP : HEADER -->
+			<div class="gnb_grphd">
+				<!-- [D] 3depth (2depth로 이동) -->
+				<h2 class="h"><a href="#none"><span>1+1행사</span></a></h2>
+
+				<ul class="nav_mcate">
+					<li>
+						<a href="#none">
+							<p>1+1 행사</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<p>Sale</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<p>투데이핫딜</p>
+						</a>
+					</li>
+				</ul>
+			</div><!-- //GROUP : HEADER -->
+
+			<!-- CONTENT -->
+			<div id="content">
+				<!-- SECTION : SUB CATEGORY -->
+				<div class="nav_scate">
+					<ul>
+						<li class="on"><a href="#none">전체(144)</a></li>
+						<li><a href="#none">스킨케어(720)</a></li>
+					</ul>
+				</div><!-- //SECTION : SUB CATEGORY -->
+
+				<!-- SECTION : FILTER -->
+				<div class="sec_filter" id="filterBox">
+					<ul>
+						<li class="sortN">총 <em>150</em>개의 상품</li>
+						<li class="sortF"><button type="button" onclick="modalPopup('#modalFilter');return false;"><i class="i-sort filter"></i>필터</button></li>
+						<li class="sortA"><button type="button"><i class="i-sort list">리스트형식</i></button></li>
+						<li class="sortP"><button type="button" onclick="modalPopup('#modalOption');return false;"><i class="i-sort align">정렬방식</i>높은 가격순</button></li>
+					</ul>
+
+					<!-- 필터 선택시 노출
+					<div class="selected">
+						<div class="inner">
+							<span class="item">스페셜기프트<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">주름개선<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">라네즈<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">리리코스<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">스페셜기프트<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">주름개선<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">라네즈<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">리리코스<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+						</div>
+					</div> --><!-- //필터 선택시 노출 -->
+				</div><!-- //SECTION : FILTER -->
+
+				<!-- PRODUCT : 상품리스트 -->
+				<!-- [D] 갤러리 타입에 따른 클래스 변화
+					리스트형 (기본) : <div class="prod_list_box">
+					갤러리형 : <div class="prod_list_box album"> -->
+				<div class="prod_list_box">
+					<ul class="list">
+						<li>
+							<!-- [D] 품절일 경우 클래스 변화
+								기본 : <div class="prod_item">
+								품절일 경우 : <div class="prod_item soldout"> -->
+							<div class="prod_item">
+								<a href="#none">
+									<!-- [D] 로드 전 / 이미지 없을 경우 예시안 -->
+									<div class="thumb"><img data-original="" class="lazy img-responsive" alt="상품명"></div>
+
+									<div class="details">
+										<p class="brand_nm">헤라</p>
+										<p class="prod_nm">비비쿠션 포어 컨트롤 SPF50+ PA 컨트롤 PA+++</p>
+										<div class="price_area">
+											<!-- [D] 게시판별 스타일 처리
+												리스트형 : 할인 보여줌
+												갤러리형 : 할인 삭제 (스타일 처리) -->
+											<em class="sale">5%</em>
+											<!-- [D] 가격, 포인트일 경우 클래스 변화
+												가격 (기본) : <strong class="price">
+												포인트 : <strong class="price point"> -->
+											<strong class="price"><span>29,600</span>원</strong>
+											<del class="base"><span>32,000</span>원</del>
+										</div>
+
+										<div class="tag_area">
+											<span class="tag">호수있어요</span>
+											<span class="tag">1+1</span>
+										</div>
+
+										<div class="info">
+											<div class="grade"><i class="i-grade grade04">4점</i></div>
+											<div class="review">리뷰 <em>360</em></div>
+										</div>
+
+										<!-- [D] 활성화별 클래스 변화 (개발에서 활성화 표시할 경우 해당 클래스만 사용) - 기본/비활성화 클래스를 따로 지정하고, 이벤트 효과 클래스를 분리한 이유는 초기 로드 시 애니메이션 실행 방지하기 위함
+										기본 : <button class="btn_aplike">
+										활성화 : <button class="btn_aplike on">
+										비활성화 : <button class="btn_aplike off"> -->
+										<button type="button" class="btn_aplike" onclick="fnToggleLike(this);">
+											<!-- [D] 모션 클래스 변화 (모션에만 사용될 클래스로 활성화 표시할 때 사용하지 마세요.) - 기본/비활성화 클래스를 따로 지정하고, 이벤트 효과 클래스를 분리한 이유는 초기 로드 시 애니메이션 실행 방지하기 위함 
+											기본 : <i class="i-prod heart">
+											애니메이션 실행 : <i class="i-prod heart push">-->
+											<i class="i-prod heart">좋아요</i>
+										</button>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="prod_item">
+								<a href="#none">
+									<div class="thumb"><img data-original="../../images/renew/temp/prod_hera.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+									<div class="details">
+										<p class="brand_nm">헤라</p>
+										<p class="prod_nm">블랙 쿠션 SPF34/PA++</p>
+										<div class="price_area">
+											<em class="sale">80%</em>
+											<strong class="price"><span>129,600</span>원</strong>
+											<del class="base"><span>132,000</span>원</del>
+										</div>
+
+										<div class="tag_area"><!-- 관련 태그가 없을 경우 --></div>
+
+										<div class="info">
+											<div class="grade"><i class="i-grade grade04">4점</i></div>
+											<div class="review">리뷰 <em>360</em></div>
+										</div>
+
+										<button type="button" class="btn_aplike" onclick="fnToggleLike(this);"><i class="i-prod heart">좋아요</i></button>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="prod_item">
+								<a href="#none">
+									<div class="thumb"><img data-original="../../images/renew/temp/prod_hera2.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+									<div class="details">
+										<p class="brand_nm">헤라</p>
+										<p class="prod_nm">Apmall x HERA 블랙쿠션 시크릿박스_17호</p>
+										<div class="price_area">
+											<strong class="price"><span>129,600</span>원</strong>
+											<del class="base"><span>132,000</span>원</del>
+										</div>
+
+										<div class="tag_area">
+											<span class="tag">1+1</span>
+											<span class="tag">SALE</span>
+										</div>
+
+										<div class="info">
+											<div class="grade"><i class="i-grade grade04">4점</i></div>
+											<div class="review">리뷰 <em>360</em></div>
+										</div>
+
+										<button type="button" class="btn_aplike" onclick="fnToggleLike(this);"><i class="i-prod heart">좋아요</i></button>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="prod_item soldout">
+								<a href="#none">
+									<div class="thumb"><img data-original="../../images/renew/temp/prod_hera3.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+									<div class="details">
+										<p class="brand_nm">헤라</p>
+										<p class="prod_nm">Apmall x HERA 블랙쿠션 시크릿박스_17호</p>
+										<div class="price_area">
+											<strong class="price"><span>129,600</span>원</strong>
+											<del class="base"><span>132,000</span>원</del>
+										</div>
+
+										<div class="tag_area"><!-- 관련 태그가 없을 경우 --></div>
+
+										<div class="info">
+											<div class="grade"><i class="i-grade grade04">4점</i></div>
+											<div class="review">리뷰 <em>360</em></div>
+										</div>
+
+										<button type="button" class="btn_aplike" onclick="fnToggleLike(this);"><i class="i-prod heart">좋아요</i></button>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="prod_item">
+								<a href="#none">
+									<div class="thumb"><img data-original="../../images/renew/temp/prod_hera4.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+									<div class="details">
+										<p class="brand_nm">헤라헤라헤라헤라헤라헤라헤라헤라헤라헤라헤라</p>
+										<p class="prod_nm">Apmall x HERA 블랙쿠션 시크릿박스_17호</p>
+										<div class="price_area">
+											<strong class="price point"><span>129,600</span>P</strong>
+										</div>
+
+										<div class="tag_area"><!-- 관련 태그가 없을 경우 --></div>
+
+										<div class="info">
+											<div class="grade"><i class="i-grade grade04">4점</i></div>
+											<div class="review">리뷰 <em>360</em></div>
+										</div>
+
+										<button type="button" class="btn_aplike" onclick="fnToggleLike(this);"><i class="i-prod heart">좋아요</i></button>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div><!-- //PRODUCT : 리스트형 -->
+			</div><!-- //CONTENT -->
+		</div><!-- //CONTAINER -->
+
+		<!-- FOOTER -->
+		<footer>
+			<ul class="links top">
+				<li><a href="#none">로그인</a></li>
+				<li><a href="#none">고객센터</a></li>
+			</ul>
+
+			<div class="info_wrap">
+				<button type="button" class="btn_info">(주)아모레퍼시픽 사업자 정보</button>
+
+				<div class="view">
+					<p>
+						(주)아모레퍼시픽 대표이사 : 심상배<br>
+						전자메일주소 : <a href="mailto:apmall_support@amorepacificmall.com">apmall_support@amorepacificmall.com</a><br>
+						서울시 중구 청계천로 100 시그니쳐타워 서관 5~13층
+					</p>
+					<p>
+						호스팅제공자 : (주)아모레퍼시픽 / 사업자등록번호 : 107-86-43373<br>
+						통신판매업신고번호 : 서울중구-0408호(서울 중구청),<br>
+						건강기능식품판매업 영업신고증 제8호
+					</p>
+
+					<p>
+						배송, 사이트 관련 문의 고객센터 <strong><a href="tel:080-030-5454" class="needsclick">080-030-5454</a></strong> (수신자요금부담)<br>
+						평일 09:00~17:00 / 점심 12:00~13:00 (토,일,공휴일 휴무)
+					</p>
+					<p>
+						제품, 트러블 관련 문의 고객센터 <strong><a href="tel:080-023-5454" class="needsclick">080-023-5454</a></strong> (수신자요금부담)<br>
+						월~목 09:00~21:00 / 금 09:00~17:30 (토,일,공휴일 휴무)
+					</p>
+
+					<div class="btns">
+						<a href="#none" class="btn_cs">실시간 고객상담</a>
+					</div>
+				</div>
+			</div>
+
+			<p>고객님의 안전거래를 위해 현금 거래에 대해<br>LG U+의 구매안전 서비스를 이용하실 수 있습니다.</p>
+
+			<div class="btns_area">
+				<a href="#none" class="btn_lg">LG U+ 구매안전 서비스 가입확인</a>
+			</div>
+
+			<ul class="links">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+				<li><a href="#">사업자정보확인</a></li>
+			</ul>
+
+			<p class="copyright">&copy; AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED</p>
+		</footer><!-- //FOOTER -->
+		
+		<!-- 퀵버튼 -->
+		<div class="quick">
+			<a href="#wrap" class="btn_top"><img src="../../images/renew/common/btn_top.png" alt="최상단으로 이동"></a>
+			<button type="button" class="btn_recent" onclick="modalPopup('#modalrecentLst');return false;"><img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명"></button>
+		</div><!-- //퀵버튼 -->
+	</div><!-- WRAP -->
+</div><!-- //WRAPPER -->
+
+<!-- 최근 본 상품 팝업 팝업 : s -->
+<div id="modalrecentLst" class="modal-wrap v2">
+	<section class="modal-content">
+		<h1 class="blind">최근본 상품</h1>
+		<div class="content">
+			<section class="fg_recent" id="recentLst">
+				<strong class="h">최근본 상품</strong>
+
+				<div class="scrlable_x">
+					<ul class="list_recent">
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명">
+								<span class="date">08.14</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_02.jpg" alt="상품명">
+								<span class="date">08.13</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_03.jpg" alt="상품명">
+								<span class="date">08.12</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_04.jpg" alt="상품명">
+								<span class="date">08.11</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명">
+								<span class="date">08.10</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_02.jpg" alt="상품명">
+								<span class="date">08.09</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_03.jpg" alt="상품명">
+								<span class="date">08.08</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_04.jpg" alt="상품명">
+								<span class="date">08.07</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<a href="#none" class="btn_all">전체보기 <i class="i-arr v1-r"></i></a>
+			</section>
+		</div>
+	</section>
+
+	<button type="button" class="btn_modalpopupClose" onclick="modalPopupClose('#modalrecentLst');return false;"></button>
+</div>
+<!-- //최근 본 상품 팝업 : e -->
+
+<!-- 검색정렬 : s -->
+<div id="modalOption" class="modal-wrap">
+	<section class="modal-content">
+		<div class="content">
+			<ul class="opt">
+				<li><button type="button">판매순</button></li>
+				<li><button type="button">신상품순</button></li>
+				<li><button type="button">평점순</button></li>
+				<li><button type="button">가격이 높은 순</button></li>
+				<li><button type="button">가격이 낮은 순</button></li>
+			</ul>
+		</div>
+	</section>
+
+	<button type="button" class="btn_modalpopupClose" onclick="modalPopupClose('#modalOption');return false;">닫기</button>
+</div>
+<!-- //검색정렬 : e -->
+
+<!-- 검색필터 : s -->
+<div id="modalFilter" class="modal-wrap filter">
+	<section class="modal-content">
+		<div class="head">
+			<h1 class="ttl">검색필터</h1>
+		</div>
+		
+		<div class="content">
+			<div class="sec_filtbox">
+				<h3 class="tit"><a href="#filtBrand">브랜드</a></h3>
+				<div class="filt_area" id="filtBrand">
+					<!-- [D] 활성화별 클래스 변화 - 기본/비활성화 클래스를 따로 지정하고, 이벤트 효과를 분리한 이유는 초기 로드 시 애니메이션 실행 방지하기 위함
+					기본 : <span class="chkbox">
+					활성화 : <span class="chkbox chked">
+					비활성화 : <span class="chkbox unchked"> -->
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<!-- [D] 이벤트 효과에 따른 클래스 변화 - 이벤트 효과를 분리한 이유는 초기 로드 시 애니메이션 실행 방지하기 위함
+							기본 : <label for="">
+							애니메이션 실행 : <label for="" class="push"> -->
+						<label for="">가온도담</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">롤리타렘피카</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">댄트롤</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">리리코스</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">라네즈</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">리리코스 마린에너지</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">려</label>
+					</span>
+				</div>
+
+				<h3 class="tit"><a href="#filtSrv">서비스</a></h3>
+				<div class="filt_area" id="filtSrv">
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">당일배송</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">선물포장</label>
+					</span>
+				</div>
+
+				<h3 class="tit"><a href="#filtFeature">상품특징</a></h3>
+				<div class="filt_area" id="filtFeature">
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">호수있어요</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">대용량있어요</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="feature08">옴므</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="feature09">Night전용</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="feature010">1+1</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="feature011">스페셜기프트</label>
+					</span>
+				</div>
+
+				<h3 class="tit"><a href="#filtChance">쇼핑찬스</a></h3>
+				<div class="filt_area" id="filtChance">
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">투데이핫딜</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">Sale</label>
+					</span>
+				</div>
+
+				<h3 class="tit"><a href="#filtFunc">기능성</a></h3>
+				<div class="filt_area" id="filtFunc">
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">미백</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="">주름개선</label>
+					</span>
+					<span class="chkbox">
+						<input type="checkbox" class="i_chk" id="">
+						<label for="feature08">자외선차단</label>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="foot_btns">
+			<button type="button" class="btn_reset">초기화</button>
+			<button type="button" class="btn_submit">적용</button>
+		</div>
+	</section>
+
+	<button type="button" class="btn_modalpopupClose" onclick="modalPopupClose('#modalFilter');return false;"><i class="i-modal close2">닫기</i></button>
+</div>
+<!-- //검색필터 : e -->
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/swipe.js"></script>
+<script type="text/javascript" src="../../js/iscroll.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript" src="../../js/select.js"></script>
+<script type="text/javascript" src="../../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../../js/slick.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.lazyload.min.js?v=1.9.1"></script>
+<script type="text/javascript" src="../../js/jquery.scrollstop.min.js"></script>
+<script type="text/javascript" src="../../js/renew2017.js"></script><!-- 리뉴얼 js -->
+</body>
+</html>

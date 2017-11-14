@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>APmall</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="subject" content="">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="build" content="">
+<meta name="language" content="ko">
+<meta name="author" content="">
+<meta name="copyright" content="2017 (주)아모레퍼시픽">
+<meta name="reply-to" content="amorepacific@amorepacific.co.kr">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/common.css" media="screen">
+<link rel="stylesheet" href="../../css/content.css" media="screen">
+<link rel="stylesheet" href="../../css/popup.css" media="screen">
+<link rel="stylesheet" href="../../css/slick.css" media="screen">
+<link rel="stylesheet" href="../../css/renew2017.css" media="screen"><!-- 리뉴얼 css -->
+<link rel="stylesheet" href="../../css/renew2017_pop.css" media="screen"><!-- 리뉴얼 css -->
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- WRAP -->
+	<div id="wrap">
+		<!-- HEADER -->
+		<header>
+			<div class="header_box">
+				<div class="lft_area">
+					<h1 class="logo"><a href="/"><img src="../../images/renew/common/logo_apmall.png" alt="Apmall"></a></h1>
+					<!-- <button type="button" class="btn_back"><i class="i-global back">뒤로</i></button> -->
+					<button type="button" class="btn_side" id="btnSideNav"><i class="i-global list">메뉴</i></button>
+				</div>
+
+				<!-- <button type="button" class="btn_srch" id="btnSrch"><i class="i-global srch">검색</i></button> -->
+				<a href="#none" class="btn_cart"><i class="i-global cart">장바구니</i> <span class="item">10</span></a>
+			</div>
+		</header><!-- //HEADER -->
+
+		<!-- CONTAINER -->
+		<!-- [D] 운영 기존 흰 배경 유지 / 리뉴얼만 배경색 지정 (예외가 필요한 부분은 순차적으로 개발 변경될 가능성 있음)
+			<div id="container" class="ctr_renew"> -->
+		<div id="container" class="ctr_renew">
+			<!-- GROUP : HEADER -->
+			<div class="gnb_grphd">
+				<h2 class="h">주문결제</h2>
+			</div>
+			<!-- //GROUP : HEADER -->
+
+			<!-- CONTENT -->
+			<div id="content">
+				<div class="wrap_order">
+					<style>
+
+					</style>
+					<div class="sec_ord">
+
+						<!-- //////////////////////////////////////////////////////////////////// -->
+							<div class="nRZip_input">
+								<ul>
+									<li>
+										<dl>
+											<dt>받는 사람</dt>
+											<dd><input type="text"></dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>연락처</dt>
+											<dd>
+												<ul class="phone_dash clearfix">
+													<li><span><select name="" id="">
+														<option value="">11</option>
+													</select></span></li>
+													<li><span><input type="text" /></span></li>
+													<li><span><input type="text" /></span></li>
+												</ul>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>추가연락처<br><span>(선택)</span></dt>
+											<dd>
+												<ul class="phone_dash clearfix">
+													<li><span><input type="text" /></span></li>
+													<li><span><input type="text" /></span></li>
+													<li><span><input type="text" /></span></li>
+												</ul>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="nR_sch">
+											<dt>배송지</dt>
+											<dd class="zip_sch"><input type="text" placeholder="지역명"><a href="javascript:;">찾기</a></dd>
+										</dl>
+									</li>
+									<li style="display:block"><!-- 주소 검색 결과 none & block -->
+										<div class="nR_adress_result">
+											<ul>
+												<li>
+													<a href="">
+														경기도 안양시 만안구 안양로 343번길 57-7 (안양동)<br>경기도 안양시 만안구 안양동 873-39 안양3동<br>개나리놀이터 지하주차장
+													</a>
+												</li>
+												<li>
+													<a href="">
+														경기도 안양시 만안구 안양로 343번길 57-7 (안양동)<br>경기도 안양시 만안구 안양동 873-39 안양3동<br>개나리놀이터 지하주차장
+													</a>
+												</li>
+												<li>
+													<a href="">
+														경기도 안양시 만안구 안양로 343번길 57-7 (안양동)<br>경기도 안양시 만안구 안양동 873-39 안양3동<br>개나리놀이터 지하주차장
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li><dl><dd><input type="text"></dd></dl></li>
+									<li><dl><dd><input type="text"></dd></dl></li>
+									<li><dl><dd><input type="text"></dd></dl></li>
+								</ul>
+								<!-- //ul e -->
+								<span class="rCheckbox">
+									<input type="checkbox" id="chk01" name="i_arrChkProd001" class="chb">
+									<label for="chk01">기본배송지로 설정</label>
+								</span>
+							</div><!-- //nRZip_input e -->
+						<!-- //////////////////////////////////////////////////////////////////// -->
+
+					</div><!-- //step_1 배송지 e-->
+				</div><!-- //wrap_order -->
+			</div><!-- //CONTENT -->
+		</div><!-- //CONTAINER -->
+
+		<!-- FOOTER -->
+		<footer>
+			<ul class="foot_top">
+				<li><a href="#none">로그인</a></li>
+				<li><a href="#none">고객센터</a></li>
+			</ul>
+
+			<div class="cs_info">
+				<p>
+					배송, 사이트 관련 문의 고객센터 : <strong><a href="tel:080-030-5454" class="needsclick">080-030-5454</a></strong>(수신자요금부담)<br>
+					운영시간 : 평일 09:00~17:00 / 점심 12:00~13:00 (토/일/공휴일 휴무)
+				</p>
+				<p>
+					제품, 트러블 관련 문의 고객센터 : <strong><a href="tel:080-023-5454" class="needsclick">080-023-5454</a></strong>(수신자요금부담)<br>
+					운영시간 : 월요일~목요일 09:00~21:00 / <br>
+					금요일 09:00~17:30 (토/일/공휴일 휴무)
+				</p>
+			</div>
+
+			<div class="foot_cont">
+				<p>
+					㈜아모레퍼시픽 대표이사 : 심상배 <br>
+					전자메일주소 : apmall_support@amorepacificmall.com<br>
+					서울시 중구 청계천로 100 시그니쳐타워 서관 5~13층
+				</p>
+				<p>
+					호스팅제공자 : (주)아모레퍼시픽 / 사업자등록번호 : 107-86-43373<br>
+					통신판매업신고번호 : 서울중구-0408호(서울 중구청),<br>
+					건강기능식품판매업 영업신고증 제8호
+				</p>
+				<p>
+					고객님의 안전거래를 위해 현금 거래에 대해<br>
+					LG U+의 구매안전 서비스를 이용하실 수 있습니다.
+				</p>
+			</div>
+
+			<div class="btn_area">
+				<a href="#none" class="btn_lg">LG U+ 구매안전 서비스 가입확인</a>
+				<a href="#none" class="btn_cs">실시간 고객상담</a>
+			</div>
+
+			<ul class="foot_bot">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">사업자정보확인</a></li>
+			</ul>
+			<p class="copyright">&copy; AMOREPACIFIC CORPORATION ALL RIGHTS RESERVED</p>
+		</footer><!-- //FOOTER -->
+
+		<!-- BAR : FLOAT BOTTOM (해당 내용 확장 가능성 있음 - 상품상세 통합) -->
+		<div class="floatbar">
+			<!-- 퀵버튼 -->
+			<div class="quick">
+				<a href="#wrap" class="btn_top">
+					<img src="../../images/renew/common/btn_top.png" alt="최상단으로 이동">
+				</a>
+				<button type="button" class="btn_recent" onclick="modalPopup('#modalrecentLst');return false;">
+					<img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명">
+				</button>
+			</div>
+			<!-- //퀵버튼 -->
+
+			<!-- 컨트롤바 -->
+			<div class="ctrlbar">
+				<button type="button" class="btn_prev"><i class="i-global prev">이전 페이지</i></button>
+				<button type="button" class="btn_next disabled"><i class="i-global next">다음 페이지</i></button>
+				<button type="button" class="btn_like"><i class="i-global like">좋아요</i></button>
+				<button type="button" class="btn_my"><i class="i-global my">마이페이지</i></button>
+			</div>
+			<!-- 컨트롤바 -->
+		</div>
+		<!-- //BAR : FLOAT BOTTOM -->
+	</div><!-- //WRAP -->
+</div><!-- //WRAPPER -->
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/swipe.js"></script>
+<script type="text/javascript" src="../../js/iscroll.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript" src="../../js/select.js"></script>
+<script type="text/javascript" src="../../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../../js/slick.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.lazyload.min.js?v=1.9.1"></script>
+<script type="text/javascript" src="../../js/jquery.scrollstop.min.js"></script>
+<script type="text/javascript" src="../../js/renew2017.js"></script><!-- 리뉴얼 js -->
+
+
+
+<script type="text/javascript">
+$(window).on('scroll',function(){
+	var winScroll = $(window).scrollTop();
+
+	if( winScroll > 300 ){
+		$(".quick_bot").stop(true,true).addClass("on");
+	}else{
+		$(".quick_bot").stop(true,true).removeClass("on");
+	}
+});
+
+$('.btn_top').on('click',function(){
+	$(window).scrollTop(0);
+});
+
+$('.acco').find('a').on('click',function(){
+	if($(this).hasClass('on')!=true){
+		$(this).addClass('on').parents('.sec_ord').find('div.cont').addClass('on');
+	}else{
+		$(this).removeClass('on').parents('.sec_ord').find('div.cont').removeClass('on');
+	}
+});
+
+</script>
+
+
+</body>
+</html>

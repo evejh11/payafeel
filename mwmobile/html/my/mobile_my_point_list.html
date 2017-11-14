@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>APmall</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="subject" content="">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="build" content="">
+<meta name="language" content="ko">
+<meta name="author" content="">
+<meta name="copyright" content="2017 (주)아모레퍼시픽">
+<meta name="reply-to" content="amorepacific@amorepacific.co.kr">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/common.css" media="screen">
+<link rel="stylesheet" href="../../css/content.css" media="screen">
+<link rel="stylesheet" href="../../css/popup.css" media="screen">
+<link rel="stylesheet" href="../../css/slick.css" media="screen">
+<link rel="stylesheet" href="../../css/renew2017.css" media="screen"><!-- 리뉴얼 css -->
+<link rel="stylesheet" href="../../css/renew2017_pop.css" media="screen"><!-- 리뉴얼 css -->
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- WRAP -->
+	<div id="wrap">
+		<!-- HEADER -->
+		<header>
+			<div class="header_box">
+				<div class="lft_area">
+					<h1 class="logo"><a href="/"><img src="../../images/renew/common/logo_apmall.png" alt="Apmall"></a></h1>
+					<!--<button type="button" class="btn_back"><i class="i-global back">뒤로</i></button>-->
+					<button type="button" class="btn_side" id="btnSideNav"><i class="i-global list">메뉴</i></button>
+				</div>
+
+				<button type="button" class="btn_srch" id="btnSrch"><i class="i-global srch">검색</i></button>
+				<a href="#none" class="btn_cart"><i class="i-global cart">장바구니</i> <span class="item">10</span></a>
+			</div>
+		</header><!-- //HEADER -->
+		
+		<!-- CONTAINER -->
+		<!-- [D] 운영 기존 흰 배경 유지 / 리뉴얼만 배경색 지정 (예외가 필요한 부분은 순차적으로 개발 변경될 가능성 있음)
+			<div id="container" class="ctr_renew"> -->
+		<div id="container" class="ctr_renew">
+			<!-- GROUP : HEADER -->
+			<div class="gnb_grphd">
+				<h2 class="h"><span>뷰티포인트&amp;블루리본포인트</span></h2>
+			</div><!-- //GROUP : HEADER -->
+
+			<!-- CONTENT -->
+			<div id="content">
+				<div class="mypoint">
+					<!-- accodian -->
+					<section id="accoTab2" class="accordion">
+						<h2 class="tit" id="tit_beauty">
+							<a href="#none">뷰티포인트</a>
+							<span class="count beautyPoint">510,000 <em>P</em></span>
+						</h2>
+						<div class="contView">
+							<div class="tabletype">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<caption><span>뷰티포인트</span></caption>
+									<colgroup>
+										<col width="33%">
+										<col width="33%">
+										<col width="*">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>
+												<p>회원등급</p>
+											</th>
+											<th>
+												<p>사용가능한<br>포인트<!--<span class="sp_point beauty3"></span>--></p>
+											</th>
+											<th>
+												<p><span class="t1">소멸 예정</span>포인트<!--<span class="sp_point beauty3"></span>--></p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<p class="mbLevel">일반회원</p>
+												<p class="mbLeveltxt">구매금액의 <em>5%</em>적립</p>
+											</td>
+											<td><span class="sp_point beauty usable_point">510,000</span></td>
+											<td>
+												<span class="sp_point beauty lose_bppoint">999,999</span>
+												<!--<a class="lose_bpoint" href="#" style="color:#4c7ed6;text-decoration: underline;">소멸예정 포인트 조회</a>-->
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tab_wrap2 t1">
+								<ul>
+									<li class="tab_cate active li_dtm"><a href="#" class="twoWeek" id="beauty">2주</a></li>
+									<li class="tab_cate li_dtm"><a href="#" class="onemonth" id="beauty">1개월</a></li>
+									<li class="tab_cate li_dtm"><a href="#" class="threemonth" id="beauty">3개월</a></li>
+									<li class="tab_cate li_dtm"><a href="#" class="sixmonth" id="beauty">6개월</a></li>
+									<li class="tab_cate  li_dtm"><a href="#" class="oneyear" id="beauty">1년</a></li>
+								</ul>
+							</div>
+							<div class="tabletype3">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<caption><span>뷰티포인트</span></caption>
+									<colgroup>
+										<col width="33%">
+										<col width="33%">
+										<col width="*">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>
+												<p>날짜</p>
+											</th>
+											<th>
+												<p>구분</p>
+											</th>
+											<th>
+												<p>포인트</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody class="beautyList">
+										<tr>
+											<td>2017.11.01</td>
+											<td>6월이상 미사용포인트 차감(17/10/31기준)</td>
+											<td>-980p</td>
+										</tr>
+										<tr>
+											<td>2017.10.01</td>
+											<td>6월이상 미사용포인트 차감(17/09/30기준)</td>
+											<td>-16,334p</td>
+										</tr>
+										<tr>
+											<td>2017.09.22</td>
+											<td>댓글작성</td>
+											<td>3p</td>
+										</tr>
+										<tr>
+											<td>2017.09.22</td>
+											<td>구매후기</td>
+											<td>-100p</td>
+										</tr>
+										<tr>
+											<td>2017.09.22</td>
+											<td>구매후기</td>
+											<td>100p</td>
+										</tr>
+										<tr>
+											<td colspan="3">
+												<div class="nodata">
+													<p class="sp_bg s5">원하시는 내용을 찾을수가 없어요.
+														<br>다른 검색어로 검색해주시겠어요?</p>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!--<p class="btn_more v2 btn_beauty_more"><a href="#"><span>더보기</span></a></p>
+							<span class="btn_ty v3 btn_beauty_policy"><a href="#none" onclick="modalPopup('#beautypointPolicy'); return false;">뷰티포인트 정책 안내</a></span>-->
+						</div>
+						<!-- 뷰티포인트 정책 안내 -->
+						<div id="beautypointPolicy" class="modal-wrap">
+							<section class="modal-content popupbeautypointPolicy">
+								<div class="head">
+									<p class="ttl">뷰티포인트 정책 안내</p>
+								</div>
+								<div class="content">
+									<div class="box">
+										<h2>뷰티포인트 (Beauty  Point) 란?</h2>
+										<p>적립된 뷰티포인트는 아모레퍼시픽의 모든 매장과 아모레퍼시픽 온라인쇼핑몰 (<span class="ftxt">http://www.amorepacificmall.com</span>), 에뛰드 매장과 에뛰드 온라인쇼핑몰 (<span class="ftxt">http://www.etude.co.kr/productMain.do</span>), 이니스프리 매장과 이니스프리 온라인쇼핑몰 (<span class="ftxt">http://www.innisfree.co.kr</span>), 뷰티포인트 ZONE (<span class="ftxt">http://www.beautypoint.co.kr</span>)에서 제품으로 교환할 수 있습니다.</p>
+									</div>
+									<div class="box">
+										<h2>뷰티포인트 사용안내</h2>
+										<ul>
+											<li>적립하신 뷰티포인트는 1포인트 1원으로 환산하여 적립한도 내에서 원하시는 모든 제품으로 교환 가능합니다.</li>
+											<li>뷰티포인트는 정상가로 결제되어집니다.</li>
+											<li>2011년 12월 19일부터 에뛰드의 캐쉬포인트 현금 또는 신용카드와 합산하여 결제할 수 없습니다.</li>
+											<li>뷰티포인트의 최초 사용 포인트는 3000포인트 부터 사용 가능하며, 그 이후에는 3000P 포인트 이하도 사용이 가능합니다.</li>
+											<li>뷰티포인트 사용시, 쿠폰이나 사은품 지급이 되지않습니다.</li>
+											<li>할인 기간에 구매시, 할인된 가격이 아닌 제품의 적립이 중단되고, 뷰티포인트로 적립됩니다.</li>
+											<li>기존에 적립된 에뛰드 캐쉬포인트는 고객님의 동의를 거쳐 뷰티포인트로 전환하실 수 있으며, 보유하신 뷰티포인트와 합산하여 언제나 현금처럼 편리하게 사용하실 수 있습니다.</li>
+											<li>기존에 적립된 에뛰드 캐쉬포인트는 고객님의 동의를 거쳐 뷰티포인트로 전환하실 수 있으며, 보유하신 뷰티포인트와 합산하여 언제나 현금처럼 편리하게 사용하실 수 있습니다.</li>
+										</ul>
+									</div>
+									<div class="box">
+										<h2>알아두세요!!</h2>
+										<ul>
+											<li>할인쿠폰과 교환권, 일부 상품권으로 제품을 결제하실 경우, 뷰티포인트가 적립되지 않습니다.</li>
+											<li>제품 구매를 취소할 경우 적립된 뷰티포인트도 자동으로 적립 취소됩니다. </li>
+											<li>연간 적립 가능한 최대 뷰티포인트는 70만점으로 제한 됩니다. </li>
+											<li>초과분에 대해서는 포인트 적립이 되지 않습니다.</li>
+											<li>내부 심사기준에 따라 특정 브랜드 구매 편중 및 적립 과다로 비정상적으로 판단될 경우 뷰티포인트가 적립되지 않습니다.</li>
+										</ul>
+									</div>
+								</div>
+								<a href="#" class="btn_modalpopupClose" onclick="modalPopupClose('#beautypointPolicy');return false;"><img src="http://10.155.8.76:8324/mwmobile/images//common/btn_modalpopupClose.png" alt="닫기"></a>
+							</section>
+						</div>
+						<div id="beautypointLose" class="modal-wrap">
+							<section class="modal-content popupbeautypointLose">
+								<div class="head">
+									<p class="ttl">소멸예정 뷰티포인트</p>
+								</div>
+								<div class="content">
+									<div class="box purchase_list">
+										<h2>제품구매적립소멸</h2>
+										<ul id="purlist">
+										</ul>
+									</div>
+									<div class="box event_list">
+										<h2>이벤트적립소멸</h2>
+										<ul id="evtlist">
+										</ul>
+									</div>
+								</div>
+								<div class="rule" style="padding:10px 15px;background-color:#ececec; color:#333; font-size:0.9em;">
+									<div class="rule_inner" style="width:90%; margin:0 auto; padding:10px 0;">
+										<ul style="text-indent:-8px;color:black">
+											<li>- 포인트 소멸은 <span style="font-weight:bolder;color:black;">소멸예정일</span> 자정에 완료되므로, 반드시 소멸 예정인 전일까지 사용하시기 바랍니다.
+												<br/>
+												<span style="color:#666;">예) 소멸예정일이 2015년 7월 30일인 포인트<br/> 2015년 7월 29일에서 30일로 넘어가는 밤 12시에 소멸</span>
+											</li>
+											<li>- 보다 자세한 뷰티포인트 안내는 <span style="font-weight:bolder; color:black;">아모레퍼시픽 통합 멤버십 사이트</span>에서 확인 가능합니다. www.beautypoint.co.kr</li>
+										</ul>
+									</div>
+								</div>
+								<a href="#" class="btn_modalpopupClose" onclick="modalPopupClose('#beautypointLose');return false;"><img src="http://10.155.8.76:8324/mwmobile/images//common/btn_modalpopupClose.png" alt="닫기"></a>
+							</section>
+						</div>
+						<!-- //뷰티포인트 정책 안내 -->
+					</section>
+					<!-- //accodian -->
+				</div>
+			</div><!-- //CONTENT -->
+		</div><!-- //CONTAINER -->
+
+		<!-- FOOTER -->
+		<footer>
+			<ul class="links top">
+				<li><a href="#none">로그인</a></li>
+				<li><a href="#none">고객센터</a></li>
+			</ul>
+
+			<div class="info_wrap">
+				<button type="button" class="btn_info">(주)아모레퍼시픽 사업자 정보</button>
+
+				<div class="view">
+					<p>
+						(주)아모레퍼시픽 대표이사 : 심상배<br>
+						전자메일주소 : <a href="mailto:apmall_support@amorepacificmall.com">apmall_support@amorepacificmall.com</a><br>
+						서울시 중구 청계천로 100 시그니쳐타워 서관 5~13층
+					</p>
+					<p>
+						호스팅제공자 : (주)아모레퍼시픽 / 사업자등록번호 : 107-86-43373<br>
+						통신판매업신고번호 : 서울중구-0408호(서울 중구청),<br>
+						건강기능식품판매업 영업신고증 제8호
+					</p>
+
+					<p>
+						배송, 사이트 관련 문의 고객센터 <strong><a href="tel:080-030-5454" class="needsclick">080-030-5454</a></strong> (수신자요금부담)<br>
+						평일 09:00~17:00 / 점심 12:00~13:00 (토,일,공휴일 휴무)
+					</p>
+					<p>
+						제품, 트러블 관련 문의 고객센터 <strong><a href="tel:080-023-5454" class="needsclick">080-023-5454</a></strong> (수신자요금부담)<br>
+						월~목 09:00~21:00 / 금 09:00~17:30 (토,일,공휴일 휴무)
+					</p>
+
+					<div class="btns">
+						<a href="#none" class="btn_cs">실시간 고객상담</a>
+					</div>
+				</div>
+			</div>
+
+			<p>고객님의 안전거래를 위해 현금 거래에 대해<br>LG U+의 구매안전 서비스를 이용하실 수 있습니다.</p>
+
+			<div class="btns_area">
+				<a href="#none" class="btn_lg">LG U+ 구매안전 서비스 가입확인</a>
+			</div>
+
+			<ul class="links">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+				<li><a href="#">사업자정보확인</a></li>
+			</ul>
+
+			<p class="copyright">&copy; AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED</p>
+		</footer><!-- //FOOTER -->
+		
+		<!-- 퀵버튼 -->
+		<div class="quick">
+			<a href="#wrap" class="btn_top"><img src="../../images/renew/common/btn_top.png" alt="최상단으로 이동"></a>
+			<button type="button" class="btn_recent" onclick="modalPopup('#modalrecentLst');return false;"><img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명"></button>
+		</div><!-- //퀵버튼 -->
+	</div><!-- //WRAP -->
+</div><!-- //WRAPPER -->
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/swipe.js"></script>
+<script type="text/javascript" src="../../js/iscroll.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript" src="../../js/select.js"></script>
+<script type="text/javascript" src="../../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../../js/slick.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.lazyload.min.js?v=1.9.1"></script>
+<script type="text/javascript" src="../../js/jquery.scrollstop.min.js"></script>
+<script type="text/javascript" src="../../js/renew2017.js"></script><!-- 리뉴얼 js -->
+</body>
+</html>
