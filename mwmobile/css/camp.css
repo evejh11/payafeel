@@ -1,6 +1,0 @@
-@charset "utf-8";
-
-#sideMenu .myinfo .myCartInfo{padding:15px 0 0 100px;height:130px;font-size:15px;background:#5144ab url(../images/camp/bg_myCartInfo.png) no-repeat 20px 35px;background-size:62px auto;}
-#sideMenu .myinfo .myCartInfo .nm{margin-bottom:5px;}
-#sideMenu .myinfo .myCartInfo p em{color:#ec6386;}
-#sideMenu .myinfo .myCartInfo a.btn{display:inline-block;margin-top:8px;padding:0 18px 0 7px;height:24px;line-height:24px;font-size:12px;color:#fff;background:#6a5fb7 url(../images/camp/bg_arr_white_v01.png) no-repeat right 8px top 50%;background-size:6px auto;border:1px solid #5144ab;}
