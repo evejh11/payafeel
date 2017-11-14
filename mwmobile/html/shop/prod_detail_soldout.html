@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>APmall</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="subject" content="">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="build" content="">
+<meta name="language" content="ko">
+<meta name="author" content="">
+<meta name="copyright" content="2017 (주)아모레퍼시픽">
+<meta name="reply-to" content="amorepacific@amorepacific.co.kr">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/common.css" media="screen">
+<link rel="stylesheet" href="../../css/content.css" media="screen">
+<link rel="stylesheet" href="../../css/popup.css" media="screen">
+<link rel="stylesheet" href="../../css/slick.css" media="screen">
+<link rel="stylesheet" href="../../css/renew2017.css" media="screen"><!-- 리뉴얼 css -->
+<link rel="stylesheet" href="../../css/renew2017_pop.css" media="screen"><!-- 리뉴얼 css -->
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- WRAP -->
+	<div id="wrap">
+		<!-- HEADER -->
+		<header>
+			<div class="header_box">
+				<div class="lft_area">
+					<h1 class="logo"><a href="/"><img src="../../images/renew/common/logo_apmall.png" alt="Apmall"></a></h1>
+					<button type="button" class="btn_back"><i class="i-global back">뒤로</i></button>
+					<button type="button" class="btn_side" id="btnSideNav"><i class="i-global list">메뉴</i></button>
+				</div>
+
+				<button type="button" class="btn_srch" id="btnSrch"><i class="i-global srch">검색</i></button>
+				<a href="#none" class="btn_cart"><i class="i-global cart">장바구니</i> <span class="item">10</span></a>
+			</div>
+		</header><!-- //HEADER -->
+
+		<!-- CONTAINER -->
+		<!-- [D] 운영 기존 흰 배경 유지 / 리뉴얼만 배경색 지정 (예외가 필요한 부분은 순차적으로 개발 변경될 가능성 있음)
+			<div id="container" class="ctr_renew"> -->
+		<div id="container" class="ctr_renew">
+			<!-- CONTENT -->
+			<div id="content">
+				<!-- 픽스 버튼 -->
+				<div class="trans_btn only_bottom">
+					<div class="trans_box fix">
+						<!--<button type="button" onclick="notiToastOpen()">상품이 선택된 경우 장바구니 담을 경우</button>-->
+						<!-- [D] 버튼별 속성,클래스 지정
+							기본 : <button type="button">
+							품절일 경우 : <button type="button" class="disabled" disabled="disabled" id=""> -->
+						<div><button type="button" id="btnCart">장바구니</button></div>
+						<div><button type="button" id="btnPurchase">구매하기</button></div>
+					</div>
+				</div><!-- //픽스 버튼 -->
+
+				<!-- 옵션선택 : 기본 -->
+				<div class="spopts_wrap" id="spoptsWrap">
+					<div class="btns_fd">
+						<button type="button" class="btn_close">옵션박스 닫기</button>
+					</div>
+
+					<div class="scrl_opts">
+						<div class="optslt_area">
+							<button type="button" class="btn_slt" id="btnOptOpen">옵션을 선택해주세요</button>
+						</div>
+
+						<div class="slted_area">
+							<!-- [D] 상태별 클래스 변화
+								기본 : <div class="item">
+								품절 : <div class="item disabled"> -->
+							<!--<div class="item">
+								<p class="prod_nm ellipsis">워터 슬리핑 마스크 #01 SKYBLUE 워터 슬리핑 마스크 #01 SKYBLUE</p>
+
+								<div class="info">
+									<div class="amount_area">
+										<div class="amount">
+											<input type="tel" value="1" maxlength="3">
+											<button type="button" class="btn_omit"><i class="i-shop minus">감소</i></button>
+											<button type="button" class="btn_add"><i class="i-shop plus">증가</i></button>
+										</div>
+									</div>
+
+									<div class="price_area">
+										<strong class="price"><span>29,600</span>원</strong>
+									</div>
+								</div>
+
+								<button type="button" class="btn_del"><i class="i-shop del"></i></button>
+							</div>
+
+							<div class="item">
+								<p class="prod_nm ellipsis">워터 슬리핑 마스크 #01 SKYBLUE</p>
+								<div class="info">
+									<div class="amount_area">
+										<div class="amount">
+											<input type="tel" value="1" maxlength="3">
+											<button type="button" class="btn_omit"><i class="i-shop minus">감소</i></button>
+											<button type="button" class="btn_add"><i class="i-shop plus">증가</i></button>
+										</div>
+									</div>
+
+									<div class="price_area">
+										<strong class="price"><span>29,600</span>원</strong>
+									</div>
+								</div>
+
+								<button type="button" class="btn_del"><i class="i-shop del"></i></button>
+							</div>-->
+
+							<div class="item disabled">
+								<p class="prod_nm ellipsis">워터 슬리핑 마스크 #01 SKYBLUE</p>
+								<div class="info">
+									<div class="amount_area">
+										일시품절
+									</div>
+
+									<div class="price_area">
+										<strong class="price"><span>29,600</span>원</strong>
+									</div>
+								</div>
+
+								<button type="button" class="btn_del"><i class="i-shop del"></i></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="total_area">
+						<p class="qty">1개 선택</p>
+
+						<dl class="price">
+							<dt>총 금액</dt>
+							<dd><strong>35,000</strong>원</dd>
+						</dl>
+					</div>
+
+					<!-- 품절 상품일 경우 -->
+					<div class="noti_area">
+						<p class="txt">선택하신 상품은 현재 품절입니다.</p>
+						<button type="button" onclick="modalPopup('#commonMessageBox');return false;">입고 알리미 신청</button>
+					</div>
+				</div><!-- //옵션선택 : 기본 -->
+
+				<!-- 옵션선택 : 세부옵션 (단일 상품일 경우 사용하지 않음) -->
+				<div class="spopts_wrap single" id="spoptsOption">
+					<div class="btns_fd">
+						<button type="button" class="btn_close">옵션박스 닫기</button>
+					</div>
+
+					<div class="scrl_opts">
+						<div class="optslt_area">
+							<button type="button" class="btn_slt" id="btnOptClose">옵션을 선택해주세요</button>
+							<div class="list_opt" id="listOptScroll">
+								<ul class="list">
+									<li>
+										<a href="#none">
+											<div class="opt_nm">No.1 SKYBLUE </div>
+											<div class="price_area">
+												<del class="base"><span>32,000</span>원</del>
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>
+									<li class="disabled">
+										<a href="#none">
+											<div class="opt_nm">[NEW] 01 부케누디 [일시품절]</div>
+											<div class="price_area">
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>
+									<li class="disabled">
+										<a href="#none">
+											<div class="opt_nm">[NEW] 01 부케누디 [일시품절]</div>
+											<div class="price_area">
+												<del class="base"><span>32,000</span>원</del>
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#none">
+											<div class="opt_nm">[NEW] 01 부케누디</div>
+											<div class="price_area">
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#none">
+											<div class="opt_nm">[NEW] 01 부케누디</div>
+											<div class="price_area">
+												<del class="base"><span>32,000</span>원</del>
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#none">
+											<div class="opt_nm">[NEW] 01 부케누디</div>
+											<div class="price_area">
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>
+									<!--<li>
+										<a href="#none">
+											<div class="opt_nm">[NEW] 01 부케누디</div>
+											<div class="price_area">
+												<del class="base"><span>32,000</span>원</del>
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#none">
+											<div class="opt_nm">[NEW] 111111 부케누디</div>
+											<div class="price_area">
+												<strong class="price"><span>29,600</span>원</strong>
+											</div>
+										</a>
+									</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div><!-- //옵션선택 : 세부옵션 -->
+			</div><!-- //CONTENT -->
+		</div><!-- //CONTAINER -->
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="cs_info">
+				<p>
+					배송, 사이트 관련 문의 고객센터<br>
+					<strong><a href="tel:080-030-5454" class="needsclick">080-030-5454</a></strong> (수신자요금부담)<br>
+					평일 09:00~17:00 / 점심 12:00~13:00 (토,일,공휴일 휴무)
+				</p>
+				<p>
+					제품, 트러블 관련 문의 고객센터<br>
+					<strong><a href="tel:080-023-5454" class="needsclick">080-023-5454</a></strong> (수신자요금부담)<br>
+					월요일 ~ 목요일 09:00~21:00 / 금요일 09:00~17:30 (토,일,공휴일 휴무)
+				</p>
+			</div>
+
+			<div class="foot_cont">
+				<p>
+					(주)아모레퍼시픽 대표이사 : 심상배<br>
+					전자메일주소 <a href="mailto:apmall_support@amorepacificmall.com">apmall_support@amorepacificmall.com</a><br>
+					서울시 중구 청계천로 100 시그니쳐타워 서관 5~13층
+				</p>
+				<p>
+					호스팅제공자 : (주)아모레퍼시픽 / 사업자등록번호 : 107-86-43373<br>
+					통신판매업신고번호 : 서울중구-0408호(서울 중구청),<br>
+					건강기능식품판매업 영업신고증 제8호
+				</p>
+				<p>
+					고객님의 안전거래를 위해 현금 거래에 대해<br>
+					LG U+의 구매안전 서비스를 이용하실 수 있습니다.
+				</p>
+			</div>
+
+			<div class="btn_area">
+				<a href="#none" class="btn_lg">LG U+ 구매안전 서비스 가입확인</a>
+				<a href="#none" class="btn_cs">실시간 고객상담</a>
+			</div>
+
+			<ul class="foot_bot">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+				<li><a href="#">사업자정보확인</a></li>
+			</ul>
+			<p class="copyright">&copy; AMOREPACIFIC CORPORATION ALL RIGHTS RESERVED</p>
+		</footer><!-- //FOOTER -->
+
+		<!-- 퀵버튼 -->
+		<div class="quick">
+			<a href="#wrap" class="btn_top"><img src="../../images/renew/common/btn_top.png" alt="최상단으로 이동"></a>
+			<!--<button type="button" class="btn_recent" onclick="modalPopup('#modalrecentLst');return false;"><img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명"></button>-->
+		</div><!-- //퀵버튼 -->
+	</div><!-- //WRAP -->
+</div><!-- //WRAPPER -->
+
+<!-- 입고알리미 신청 : s -->
+<div id="commonMessageBox" class="modal-wrap">
+	<section class="modal-content">
+		<div class="content">
+			<p class="tit">해당 서비스는 아모레퍼시픽몰 어플에서만 신청가능합니다.</p>
+			<div class="btnArea2">
+				<span class="btn_ty"><a href="#" class="btn_ok">다운로드</a></span>
+			</div>
+		</div>
+		<a href="#" class="btn_modalpopupClose"><img src="http://images.amorepacificmall.com/mobile/images/common/btn_modalpopupClose.png" alt="닫기"></a>
+	</section>
+</div><!-- // 입고알리미 신청 : e -->
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/swipe.js"></script>
+<script type="text/javascript" src="../../js/iscroll.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript" src="../../js/select.js"></script>
+<script type="text/javascript" src="../../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../../js/slick.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.lazyload.min.js?v=1.9.1"></script>
+<script type="text/javascript" src="../../js/jquery.scrollstop.min.js"></script>
+<script type="text/javascript" src="../../js/renew2017.js"></script><!-- 리뉴얼 js -->
+</body>
+</html>

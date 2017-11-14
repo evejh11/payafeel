@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>APmall</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="subject" content="">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="build" content="">
+<meta name="language" content="ko">
+<meta name="author" content="">
+<meta name="copyright" content="2017 (주)아모레퍼시픽">
+<meta name="reply-to" content="amorepacific@amorepacific.co.kr">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/common.css" media="screen">
+<link rel="stylesheet" href="../../css/content.css" media="screen">
+<link rel="stylesheet" href="../../css/popup.css" media="screen">
+<link rel="stylesheet" href="../../css/slick.css" media="screen">
+<link rel="stylesheet" href="../../css/renew2017.css" media="screen"><!-- 리뉴얼 css -->
+<link rel="stylesheet" href="../../css/renew2017_pop.css" media="screen"><!-- 리뉴얼 css -->
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- WRAP -->
+	<div id="wrap">
+		<!-- HEADER -->
+		<header>
+			<div class="header_box">
+				<div class="lft_area">
+					<h1 class="logo"><a href="/"><img src="../../images/renew/common/logo_apmall.png" alt="Apmall"></a></h1>
+					<!--<button type="button" class="btn_back"><i class="i-global back">뒤로</i></button>-->
+					<button type="button" class="btn_side" id="btnSideNav"><i class="i-global list">메뉴</i></button>
+				</div>
+
+				<button type="button" class="btn_srch" id="btnSrch"><i class="i-global srch">검색</i></button>
+				<a href="#none" class="btn_cart"><i class="i-global cart">장바구니</i> <span class="item">10</span></a>
+			</div>
+		</header><!-- //HEADER -->
+		
+		<!-- CONTAINER -->
+		<!-- [D] 운영 기존 흰 배경 유지 / 리뉴얼만 배경색 지정 (예외가 필요한 부분은 순차적으로 개발 변경될 가능성 있음)
+			<div id="container" class="ctr_renew"> -->
+		<div id="container" class="ctr_renew">
+			<!-- GROUP : HEADER -->
+			<div class="gnb_grphd">
+				<!-- [D] 3depth (2depth로 이동) -->
+				<h2 class="h"><a href="#none"><span>스킨케어</span></a></h2>
+
+				<ul class="nav_mcate coltype">
+					<li>
+						<a href="#none">
+							<!-- [D] 이미지 사이즈 : 사용자 너비 * 110 (높이값 꼭 지켜주세요) -->
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg001.png" alt=""></i>
+							<p>스킨케어</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg002.png" alt=""></i>
+							<p>메이크업</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg003.png" alt=""></i>
+							<p>네일&amp;향수</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg004.png" alt=""></i>
+							<p>바디&amp;헤어</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg005.png" alt=""></i>
+							<p>소품&amp;도구</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg006.png" alt=""></i>
+							<p>뷰티푸드</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg007.png" alt=""></i>
+							<p>옴므</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg110.png" alt=""></i>
+							<p>베이비</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<i class="icon"><img src="../../images/renew/ctg/ico_ctg103.png" alt=""></i>
+							<p>스페셜</p>
+						</a>
+					</li>
+				</ul>
+			</div><!-- //GROUP : HEADER -->
+
+			<!-- CONTENT -->
+			<div id="content">
+				<!-- SECTION : SUB CATEGORY -->
+				<div class="nav_scate">
+					<ul>
+						<li class="on"><a href="#none">클렌징(144)</a></li>
+						<li><a href="#none">모이스처라이징(720)</a></li>
+						<li><a href="#none">스페셜케어(172)</a></li>
+						<li><a href="#none">선케어(88)</a></li>
+						<li><a href="#none">세트(42)</a></li>
+					</ul>
+				</div><!-- //SECTION : SUB CATEGORY -->
+				
+				<!-- SECTION : FILTER -->
+				<div class="sec_filter" id="filterBox">
+					<ul>
+						<li class="sortN">총 <em>150</em>개의 상품</li>
+						<li class="sortF"><button type="button" onclick="modalPopup('#modalFilter');return false;"><i class="i-sort filter"></i>필터</button></li>
+						<li class="sortA"><button type="button"><i class="i-sort list">리스트형식</i></button></li>
+						<li class="sortP"><button type="button" onclick="modalPopup('#modalOption');return false;"><i class="i-sort align">정렬방식</i>높은 가격순</button></li>
+					</ul>
+
+					<!-- 필터 선택시 노출
+					<div class="selected">
+						<div class="inner">
+							<span class="item">스페셜기프트<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">주름개선<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">라네즈<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">리리코스<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">스페셜기프트<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">주름개선<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">라네즈<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+							<span class="item">리리코스<button type="button"><i class="i-sort close">필터조건 삭제</i></button></span>
+						</div>
+					</div> --><!-- //필터 선택시 노출 -->
+				</div><!-- //SECTION : FILTER -->
+
+				<!-- 상품이 없을 경우 -->
+				<div class="prod_list_empty">
+					<p class="txt">더 좋은 상품을 준비중입니다</p>
+				</div><!-- //상품이 없을 경우 -->
+			</div><!-- //CONTENT -->
+		</div><!-- //CONTAINER -->
+
+		<!-- FOOTER -->
+		<footer>
+			<ul class="links top">
+				<li><a href="#none">로그인</a></li>
+				<li><a href="#none">고객센터</a></li>
+			</ul>
+
+			<div class="info_wrap">
+				<button type="button" class="btn_info">(주)아모레퍼시픽 사업자 정보</button>
+
+				<div class="view">
+					<p>
+						(주)아모레퍼시픽 대표이사 : 심상배<br>
+						전자메일주소 : <a href="mailto:apmall_support@amorepacificmall.com">apmall_support@amorepacificmall.com</a><br>
+						서울시 중구 청계천로 100 시그니쳐타워 서관 5~13층
+					</p>
+					<p>
+						호스팅제공자 : (주)아모레퍼시픽 / 사업자등록번호 : 107-86-43373<br>
+						통신판매업신고번호 : 서울중구-0408호(서울 중구청),<br>
+						건강기능식품판매업 영업신고증 제8호
+					</p>
+
+					<p>
+						배송, 사이트 관련 문의 고객센터 <strong><a href="tel:080-030-5454" class="needsclick">080-030-5454</a></strong> (수신자요금부담)<br>
+						평일 09:00~17:00 / 점심 12:00~13:00 (토,일,공휴일 휴무)
+					</p>
+					<p>
+						제품, 트러블 관련 문의 고객센터 <strong><a href="tel:080-023-5454" class="needsclick">080-023-5454</a></strong> (수신자요금부담)<br>
+						월~목 09:00~21:00 / 금 09:00~17:30 (토,일,공휴일 휴무)
+					</p>
+
+					<div class="btns">
+						<a href="#none" class="btn_cs">실시간 고객상담</a>
+					</div>
+				</div>
+			</div>
+
+			<p>고객님의 안전거래를 위해 현금 거래에 대해<br>LG U+의 구매안전 서비스를 이용하실 수 있습니다.</p>
+
+			<div class="btns_area">
+				<a href="#none" class="btn_lg">LG U+ 구매안전 서비스 가입확인</a>
+			</div>
+
+			<ul class="links">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+				<li><a href="#">사업자정보확인</a></li>
+			</ul>
+
+			<p class="copyright">&copy; AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED</p>
+		</footer><!-- //FOOTER -->
+		
+		<!-- 퀵버튼 -->
+		<div class="quick">
+			<a href="#wrap" class="btn_top"><img src="../../images/renew/common/btn_top.png" alt="최상단으로 이동"></a>
+			<button type="button" class="btn_recent" onclick="modalPopup('#modalrecentLst');return false;"><img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명"></button>
+		</div><!-- //퀵버튼 -->
+	</div><!-- WRAP -->
+</div><!-- //WRAPPER -->
+
+<!-- 최근 본 상품 팝업 팝업 : s -->
+<div id="modalrecentLst" class="modal-wrap v2">
+	<section class="modal-content">
+		<h1 class="blind">최근본 상품</h1>
+		<div class="content">
+			<section class="fg_recent" id="recentLst">
+				<strong class="h">최근본 상품</strong>
+
+				<div class="scrlable_x">
+					<ul class="list_recent">
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명">
+								<span class="date">08.14</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_02.jpg" alt="상품명">
+								<span class="date">08.13</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_03.jpg" alt="상품명">
+								<span class="date">08.12</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_04.jpg" alt="상품명">
+								<span class="date">08.11</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명">
+								<span class="date">08.10</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_02.jpg" alt="상품명">
+								<span class="date">08.09</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_03.jpg" alt="상품명">
+								<span class="date">08.08</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="../../images/renew/temp/temp_prd_04.jpg" alt="상품명">
+								<span class="date">08.07</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<a href="#none" class="btn_all">전체보기 <i class="i-arr v1-r"></i></a>
+			</section>
+		</div>
+	</section>
+
+	<button type="button" class="btn_modalpopupClose" onclick="modalPopupClose('#modalrecentLst');return false;"></button>
+</div>
+<!-- //최근 본 상품 팝업 : e -->
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/swipe.js"></script>
+<script type="text/javascript" src="../../js/iscroll.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript" src="../../js/select.js"></script>
+<script type="text/javascript" src="../../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../../js/slick.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.lazyload.min.js?v=1.9.1"></script>
+<script type="text/javascript" src="../../js/jquery.scrollstop.min.js"></script>
+<script type="text/javascript" src="../../js/renew2017.js"></script><!-- 리뉴얼 js -->
+</body>
+</html>

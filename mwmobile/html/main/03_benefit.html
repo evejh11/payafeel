@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>APmall</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="subject" content="">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<meta name="build" content="">
+<meta name="language" content="ko">
+<meta name="author" content="">
+<meta name="copyright" content="2017 (주)아모레퍼시픽">
+<meta name="reply-to" content="amorepacific@amorepacific.co.kr">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<link rel="stylesheet" href="../../css/common.css" media="screen">
+<link rel="stylesheet" href="../../css/content.css" media="screen">
+<link rel="stylesheet" href="../../css/popup.css" media="screen">
+<link rel="stylesheet" href="../../css/slick.css" media="screen">
+<link rel="stylesheet" href="../../css/renew2017.css" media="screen"><!-- 리뉴얼 css -->
+<link rel="stylesheet" href="../../css/renew2017_pop.css" media="screen"><!-- 리뉴얼 css -->
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- WRAP -->
+	<div id="wrap">
+		<!-- HEADER -->
+		<header>
+			<div class="header_box">
+				<div class="lft_area">
+					<h1 class="logo"><a href="/"><img src="../../images/renew/common/logo_apmall.png" alt="Apmall"></a></h1>
+					<!--<button type="button" class="btn_back"><i class="i-global back">뒤로</i></button>-->
+					<button type="button" class="btn_side" id="btnSideNav"><i class="i-global list">메뉴</i></button>
+				</div>
+
+				<button type="button" class="btn_srch" id="btnSrch"><i class="i-global srch">검색</i></button>
+				<a href="#none" class="btn_cart"><i class="i-global cart">장바구니</i> <span class="item">10</span></a>
+			</div>
+		</header><!-- //HEADER -->
+		
+		<!-- CONTAINER -->
+		<!-- [D] 운영 기존 흰 배경 유지 / 리뉴얼만 배경색 지정 (예외가 필요한 부분은 순차적으로 개발 변경될 가능성 있음)
+			<div id="container" class="ctr_renew"> -->
+		<div id="container" class="ctr_renew">
+			<!-- GNB : SEARCH -->
+			<!-- [D] 메인 구성일 경우 화면 분리
+				기본(서브) : <div class="gnb_srch">
+				메인일 경우 : <div class="gnb_srch main"> -->
+			<div class="gnb_srch main">
+				<input type="text" placeholder="1만원 이상 매일 매일 선착순 사은품" value="">
+				<button type="button" class="btn_srch"><i class="i-global srch2">검색</i></button>
+				<button type="button" class="btn_del"><i class="i-global reset">검색어 삭제</i></button>
+			</div><!-- GNB : SEARCH -->
+			
+			<!-- GNB : NAV -->
+			<nav class="gnb_navwrap">
+				<h2 class="hide">메인메뉴</h2>
+				<div class="gnb_nav">
+					<div class="scrlarea" id="gnbNavScroll">
+						<ul class="nav">
+							<li><a href="#none">홈</a></li>
+							<li class="update"><a href="#none">애프터바캉스</a></li>
+							<li class="on"><a href="#none">라이프</a></li>
+							<li><a href="#none">혜택+</a></li>
+							<li><a href="#none">랭킹</a></li>
+							<li><a href="#none">브랜드</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav><!-- //GNB : NAV -->
+
+			<div id="content">
+				<h2 class="blind">혜택+</h2>
+				
+				<!-- SECTION : 상단 배너바 -->
+				<div class="bnnr_topbar">
+					<a href="#none"><img src="../../images/renew/temp/temp_bnnrbar_bnfit.jpg" alt="Ap몰이 처음이세요? Ap몰 사용 TIP"></a>
+				</div><!-- //SECTION : 상단 배너바 -->
+
+				<!-- SECTION : MAIN BANNER -->
+				<div class="sec_mbnnr" id="secMainBnnr">
+					<div class="bnnr">
+						<div><a href="#none"><img src="../../images/renew/temp/temp_bnfit_bnnr.jpg" alt=""></a></div>
+						<div><a href="#none"><img src="../../images/renew/temp/temp_main_Bannner_02.jpg" alt=""></a></div>
+						<div><a href="#none"><img src="../../images/renew/temp/temp_main_Bannner_03.jpg" alt=""></a></div>
+						<div><a href="#none"><img src="../../images/renew/temp/temp_main_Bannner_04.jpg" alt=""></a></div>
+					</div>
+
+					<div class="pager"><span class="current">01</span><span class="total">24</span></div>
+				</div><!-- //SECTION : MAIN BANNER -->
+
+				<!-- SECTION : QUICK NAV -->
+				<div class="sec_qknav">
+					<h3 class="h">Ap몰 추천서비스 둘러보기</h3>
+					
+					<ul class="nav">
+						<li>
+							<a href="#none">
+								<i class="icon"><img src="../../images/renew/main/ico_qkmain_card.png" alt=""></i>
+								<span class="txt">기프트카드</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<i class="icon"><img src="../../images/renew/main/ico_qkmain_evt.png" alt=""></i>
+								<span class="txt">이벤트</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<i class="icon"><img src="../../images/renew/main/ico_qkmain_prop.png" alt=""></i>
+								<span class="txt">정기배송</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" class="update">
+								<i class="icon"><img src="../../images/renew/main/ico_qkmain_tip.png" alt=""></i>
+								<span class="txt">쇼핑팁</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<i class="icon"><img src="../../images/renew/main/ico_qkmain_photo.png" alt=""></i>
+								<span class="txt">포토리뷰</span>
+							</a>
+						</li>
+					</ul>
+				</div><!-- //MAIN : QUICK MENU -->
+
+				<!-- SECTION : TODEAL -->
+				<!-- [D] 관리자 배경 이미지 교체 가능 (아래와 같이 개발에서 해당 배경색/이미지 경로를 교체해 주시면 됩니다)
+					<div class="sec_spotprod" style="background-color:#d3f6e7;background-image:url('../../images/renew/main/bg_todeal.jpg')"> -->
+				<div class="sec_spotprod" style="background-color:#d3f6e7;background-image:url('../../images/renew/main/bg_todeal.jpg')">
+					<div class="tit_area">
+						<a herf="#none">
+							<h3 class="h">투데이 핫딜</h3>
+							<p class="time">11 : 10 : 27</p>
+						</a>
+					</div>
+
+					<!-- SWIPE : 투데이 핫딜 -->
+					<div class="prod_swipe2" id="spotTodeal">
+						<div>
+							<a href="#none">
+								<!-- [P] 카드형일 경우 이미지 사이즈 검수 필요 (테블릿일 경우) -->
+								<div class="view_card">
+									<div class="item">
+										<div class="thumb"><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C020/201707/IMG1499SZA991312053_155.jpg" alt="상품명"></div>
+
+										<div class="details">
+											<p class="brand_nm">한율</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+											<div class="price_area">
+												<em class="sale">5%</em>
+												<strong class="price"><span>9,900</span>원</strong>
+												<del class="base'"><span>190,000</span>원</del>
+											</div>
+
+											<button type="button" class="btn_aplike" onclick="alert('좋아요!');return false;"><i class="i-prod heart">좋아요</i></button>
+										</div>
+									</div>
+
+									<div class="qty"><strong>26개 남음</strong></div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#none">
+								<div class="view_card">
+									<div class="item">
+										<div class="thumb"><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C020/201512/IMG1450Gau056867110_155.jpg" alt="상품명"></div>
+
+										<div class="details">
+											<p class="brand_nm">한율</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+											<div class="price_area">
+												<em class="sale">5%</em>
+												<strong class="price"><span>9,900</span>원</strong>
+												<del class="base'"><span>190,000</span>원</del>
+											</div>
+
+											<button type="button" class="btn_aplike" onclick="alert('좋아요!');return false;"><i class="i-prod heart">좋아요</i></button>
+										</div>
+									</div>
+
+									<div class="qty"><strong>26개 남음</strong></div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#none">
+								<div class="view_card">
+									<div class="item">
+										<div class="thumb"><img src="../../images/renew/temp/temp_bnfit_todeal_01.jpg" alt="상품명"></div>
+
+										<div class="details">
+											<p class="brand_nm">한율</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+											<div class="price_area">
+												<em class="sale">5%</em>
+												<strong class="price"><span>9,900</span>원</strong>
+												<del class="base'"><span>190,000</span>원</del>
+											</div>
+
+											<button type="button" class="btn_aplike" onclick="alert('좋아요!');return false;"><i class="i-prod heart">좋아요</i></button>
+										</div>
+									</div>
+
+									<div class="qty"><strong>26개 남음</strong></div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#none">
+								<div class="view_card">
+									<div class="item">
+										<div class="thumb"><img src="../../images/renew/temp/temp_bnfit_todeal_01.jpg" alt="상품명"></div>
+
+										<div class="details">
+											<p class="brand_nm">한율</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+											<div class="price_area">
+												<em class="sale">5%</em>
+												<strong class="price"><span>9,900</span>원</strong>
+												<del class="base'"><span>190,000</span>원</del>
+											</div>
+
+											<button type="button" class="btn_aplike" onclick="alert('좋아요!');return false;"><i class="i-prod heart">좋아요</i></button>
+										</div>
+									</div>
+
+									<div class="qty"><strong>26개 남음</strong></div>
+								</div>
+							</a>
+						</div>
+					</div><!-- //SWIPE : 투데이 핫딜 -->
+				</div><!-- //SECTION : TODEAL -->
+
+				<!-- SECTION : 스페셜 기프트 -->
+				<!-- [D] 관리자 배경 이미지 교체 가능 (아래와 같이 개발에서 해당 배경색/이미지 경로를 교체해 주시면 됩니다)
+					<div class="sec_spotprod" style="background-color:#ffe0d9;background-image:url('/images/renew/main/bg_spegift.jpg')"> -->
+				<div class="sec_spotprod" style="background-color:#ffe0d9;background-image:url('../../images/renew/main/bg_spegift.jpg')">
+					<div class="tit_area">
+						<a herf="#none">
+							<h3 class="h">스페셜 기프트</h3>
+							<p class="dsc">Ap몰이 드리는 최고의 선물</p>
+						</a>
+					</div>
+
+					<div class="prod_swipe2 gift" id="spotSpegift">
+						<div>
+							<a href="#none">
+								<!-- [P] 썸네일일 경우 이미지 사이즈 검수 필요 (이미지와 오른쪽 상품 텍스트 간격유지 어려움) -->
+								<div class="view_thumb">
+									<div class="item">
+										<div class="thumb">
+											<img src="../../images/renew/temp/temp_bnfit_gift.jpg" alt="상품명">
+										</div>
+
+										<div class="details">
+											<p class="brand_nm">한율</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+											<p class="price_area">
+												<strong class="price"><span>185,500</span>원</strong>
+											</p>
+										</div>
+									</div>
+
+									<div class="gifts">
+										<ul>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201707/IMG1500hSu941875923_155.jpg" alt="상품명"></li>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201708/IMG1503GKq476302303_155.jpg" alt="상품명"></li>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201706/IMG1498Oho787787643_155.jpg" alt="상품명"></li>
+										</ul>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#none">
+								<div class="view_thumb">
+									<div class="item">
+										<div class="thumb">
+											<img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C020/201709/IMG1504Fcd655367325_356.jpg" alt="상품명">
+										</div>
+
+										<div class="details">
+											<p class="brand_nm">해피바스</p>
+											<p class="prod_nm">[예약] 쥬스 스무디 팩</p>
+											<p class="price_area">
+												<span class="price"><em>9,900</em>원</span>
+											</p>
+										</div>
+									</div>
+
+									<div class="gifts">
+										<ul>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201707/IMG1500hSu941875923_155.jpg" alt="상품명"></li>
+										</ul>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#none">
+								<div class="view_thumb">
+									<div class="item">
+										<div class="thumb">
+											<img src="../../images/renew/temp/temp_bnfit_gift.jpg" alt="상품명">
+										</div>
+
+										<div class="details">
+											<p class="brand_nm">한율</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+											<p class="price_area">
+												<span class="price"><em>9,900</em>원</span>
+											</p>
+										</div>
+									</div>
+
+									<div class="gifts">
+										<ul>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201707/IMG1500hSu941875923_155.jpg" alt="상품명"></li>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201708/IMG1503GKq476302303_155.jpg" alt="상품명"></li>
+										</ul>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<a href="#none">
+								<div class="view_thumb">
+									<div class="item">
+										<div class="thumb">
+											<img src="../../images/renew/temp/temp_bnfit_gift.jpg" alt="상품명">
+										</div>
+
+										<div class="details">
+											<p class="brand_nm">한율</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+											<p class="price_area">
+												<span class="price"><em>9,900</em>원</span>
+											</p>
+										</div>
+									</div>
+
+									<div class="gifts">
+										<ul>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201707/IMG1500hSu941875923_155.jpg" alt="상품명"></li>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201707/IMG1500hSu941875923_155.jpg" alt="상품명"></li>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201707/IMG1500hSu941875923_155.jpg" alt="상품명"></li>
+											<li><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201707/IMG1500hSu941875923_155.jpg" alt="상품명"></li>
+										</ul>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<a href="#none" class="blind">투데이 핫딜 더보기</a>
+				</div><!-- //SECTION : 스페셜 기프트 -->
+
+				<!-- SECTION : 구매사은품 -->
+				<!-- [D] 관리자 배경 이미지 교체 가능 (아래와 같이 개발에서 해당 배경색/이미지 경로를 교체해 주시면 됩니다)
+					<div class="sec_spotprod purgift" style="background-color:#dbe3f9;background-image:url('/images/renew/main/bg_price.jpg')"> -->
+				<div class="sec_spotprod purgift" style="background-color:#dbe3f9;background-image:url('../../images/renew/main/bg_price.jpg')">
+					<div class="tit_area">
+						<a herf="#none">
+							<h3 class="h">구매사은품</h3>
+							<p class="dsc">매달 준비하는 구매금액별 사은품</p>
+						</a>
+					</div>
+
+					<div class="prod_swipe2" id="spotPrice">
+						<div>
+							<a href="#none">
+								<!-- [P] 카드형일 경우 이미지 사이즈 검수 필요 (테블릿일 경우) -->
+								<div class="view_card">
+									<div class="item">
+										<div class="thumb"><img src="../../images/renew/temp/temp_bnfit_purgift_01.jpg" alt="상품명"></div>
+
+										<div class="details">
+											<p class="target">3만원 이상 5만원 미만 구매 고객께</p>
+											<p class="type">TYPE 01</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div> 
+							<a href="#none">
+								<div class="view_card">
+									<div class="item">
+										<div class="thumb"><img src="http://images.amorepacificmall.com/UPLOAD/UPLOAD_IMAGE/C024/201709/IMG1504iJu843505417.jpg" alt="상품명"></div>
+
+										<div class="details">
+											<p class="target">3만원 이상 5만원 미만 구매 고객께</p>
+											<p class="type">TYPE 01</p>
+											<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div>
+							<div class="view_card">
+								<div class="item">
+									<div class="thumb"><img src="../../images/renew/temp/temp_bnfit_purgift_01.jpg" alt="상품명"></div>
+
+									<div class="details">
+										<p class="target">3만원 이상 5만원 미만 구매 고객께</p>
+										<p class="type">TYPE 01</p>
+										<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div>
+							<div class="view_card">
+								<div class="item">
+									<div class="thumb"><img src="../../images/renew/temp/temp_bnfit_purgift_01.jpg" alt="상품명"></div>
+
+									<div class="details">
+										<p class="target">3만원 이상 5만원 미만 구매 고객께</p>
+										<p class="type">TYPE 01</p>
+										<p class="prod_nm">VERITE 아이스 에멀전 팩트</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- //SECTION : 구매사은품 -->
+
+				<!-- SECTION : 이벤트&프로모션 -->
+				<div class="sec_bnfit">
+					<p><img src="../../images/renew/temp/temp_home_brand.jpg" alt=""></p>
+				</div><!-- //SECTION : 이벤트&프로모션 -->
+
+				<!-- SECTION : 기본 아이템 (디자인 미확정) -->
+				<div class="sec_bnfit">
+					<div class="prod_item card">
+						<div class="brand"><a href="#none"><img src="../../images/renew/brdcd/ico_adk.png"></a></div>
+
+						<a href="#none">
+							<div class="bnnr"><img src="../../images/renew/temp/temp_home_brand_02.jpg" alt=""></div>
+							<div class="details">
+								<p class="card_nm">당신이 잠든 동안에<br>쉿! 꿀잠 뷰티팁</p>
+								<p class="prod_nm"><strong>워터뱅크 슬리핑 마스크</strong></p>
+								<div class="price_area">
+									<em class="sale">20%</em>
+									<strong class="price"><span>34,000</span>원</strong>
+									<del class="base"><span>40,000</span>원</del>
+								</div>
+
+								<div class="info">
+									<div class="grade"><i class="i-grade grade05">3점</i></div>
+									<div class="review">리뷰 <em>360</em></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div><!-- //SECTION : 기본 아이템 (디자인 미확정) -->
+
+				<!-- SECTION : 뷰타 -->
+				<div class="sec_apboxwrap">
+					<div class="sec_bnfit">
+						<p><a href="#none"><img src="../../images/renew/temp/temp_home_brand_03.jpg" alt=""></a></p>
+					</div>
+
+					<!-- SECTION -->
+					<div class="sec_apbox scrlable">
+						<div class="tit_area">
+							<h3 class="h normal small">회복 솔루션 추천상품</h3>
+						</div>
+
+						<div class="scrlable_x">
+							<ul class="list_prod small">
+								<li>
+									<div class="prod_item">
+										<a href="#none">
+											<div class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+											<div class="details">
+												<p class="prod_nm ellipsis">브러쉬 팩트</p>
+												<div class="price_area">
+													<strong class="price"><span>27,000</span>원</strong>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="prod_item">
+										<a href="#none">
+											<div class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+											<div class="details">
+												<p class="prod_nm ellipsis">세럼 드롭 틴트</p>
+												<div class="price_area">
+													<strong class="price"><span>32,000</span>원</strong>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="prod_item">
+										<a href="#none">
+											<div class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+											<div class="details">
+												<p class="prod_nm ellipsis">UV미스트 쿠션</p>
+												<div class="price_area">
+													<strong class="price"><span>129,600</span>원</strong>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="prod_item">
+										<a href="#none">
+											<div class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+											<div class="details">
+												<p class="prod_nm ellipsis">프리메라</p>
+												<div class="price_area">
+													<strong class="price"><span>35,000</span>원</strong>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="prod_item">
+										<a href="#none">
+											<div class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></div>
+
+											<div class="details">
+												<p class="prod_nm ellipsis">비비쿠션</p>
+												<div class="price_area">
+													<strong class="price"><span>24,000</span>원</strong>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div><!-- //SECTION : 뷰티 -->
+
+				<!-- SECTION : 비디오 -->
+				<div class="sec_movbrd">
+					<div class="yt_box">
+						<img src="../../images/renew/common/bg_mov_x421.gif" alt="">
+						<div class="video"><iframe src="http://www.youtube.com/embed/k1pUcRETp4o?wmode=transparent&showinfo=0;&autoplay=0"></iframe></div>
+					</div>
+
+					<div class="details">
+						<p class="tit"><strong>헤라<br>그리고 박찬욱</strong></p>
+						<p>about SEOULISTA<br>16년 헤라 브랜드 영상 2탄</p>
+					</div>
+				</div><!-- //SECTION : 비디오 -->
+
+				<!-- SECTION : 쿠션존 -->
+				<div class="sec_apboxwrap">
+					<div class="sec_bnfit">
+						<p><a href="#none"><img src="../../images/renew/temp/temp_home_brand_04.jpg" alt=""></a></p>
+					</div>
+
+					<!-- SECTION -->
+					<div class="sec_apbox2">
+						<div class="tit_area">
+							<h3 class="h small">실시간 인기 쿠션</h3>
+							<p class="update">업데이트 2017.04.18</p>
+						</div>
+
+						<!-- 목록 슬라이드 영역 -->
+						<div class="list_timbest">
+							<ol>
+								<li>
+									<a href="#none">
+										<p class="thumb"><img data-original="" class="lazy img-responsive" alt="상품명"></p>
+										<div class="details">
+											<p class="num">01</p>
+											<p class="prod_nm ellipsis"><strong>헤라 UV 미스트 쿠션 커버 SPF50...</strong></p>
+											<p class="dsc">몇년째 쓰고있는 미스트쿠션 항상 믿고 사용합니다. 커버력이 최고에요</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<p class="thumb"><img data-original="../../images/renew/temp/temp_home_timebest.jpg" class="lazy img-responsive" alt="상품명"></p>
+										<div class="details">
+											<p class="num">02</p>
+											<p class="prod_nm ellipsis"><strong>라네즈 비비 쿠션 화이트닝</strong></p>
+											<p class="dsc">색상도 좋고 촉촉하고 정말 좋아요 뽀얗게 연출이 가능합니다</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<p class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></p>
+										<div class="details">
+											<p class="num">03</p>
+											<p class="prod_nm ellipsis"><strong>라네즈 스킨베일 베이스 쿠션 SP...</strong></p>
+											<p class="dsc">화사한 봄메이크업에 활용하기 위해 구입함 얇고 촉촉하게 발리며...</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<p class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></p>
+										<div class="details">
+											<p class="num">03</p>
+											<p class="prod_nm ellipsis"><strong>라네즈 스킨베일 베이스 쿠션 SP...</strong></p>
+											<p class="dsc">화사한 봄메이크업에 활용하기 위해 구입함 얇고 촉촉하게 발리며...</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<p class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></p>
+										<div class="details">
+											<p class="num">03</p>
+											<p class="prod_nm ellipsis"><strong>라네즈 스킨베일 베이스 쿠션 SP...</strong></p>
+											<p class="dsc">화사한 봄메이크업에 활용하기 위해 구입함 얇고 촉촉하게 발리며...</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<p class="thumb"><img data-original="../../images/renew/temp/temp_p_item_03.jpg" class="lazy img-responsive" alt="상품명"></p>
+										<div class="details">
+											<p class="num">03</p>
+											<p class="prod_nm ellipsis"><strong>라네즈 스킨베일 베이스 쿠션 SP...</strong></p>
+											<p class="dsc">화사한 봄메이크업에 활용하기 위해 구입함 얇고 촉촉하게 발리며...</p>
+										</div>
+									</a>
+								</li>
+							</ol>
+						</div><!-- //목록 슬라이드 영역 -->
+					</div>
+				</div><!-- //SECTION : 쿠션존 -->
+			</div><!-- //CONTENT -->
+		</div><!-- //CONTAINER -->
+		
+		<!-- FOOTER -->
+		<footer>
+			<ul class="foot_top">
+				<li><a href="#none">로그인</a></li>
+				<li><a href="#none">고객센터</a></li>
+			</ul>
+
+			<div class="cs_info">
+				<p>
+					배송, 사이트 관련 문의 고객센터 : <strong><a href="tel:080-030-5454" class="needsclick">080-030-5454</a></strong>(수신자요금부담)<br>
+					운영시간 : 평일 09:00~17:00 / 점심 12:00~13:00 (토/일/공휴일 휴무)
+				</p>
+				<p>
+					제품, 트러블 관련 문의 고객센터 : <strong><a href="tel:080-023-5454" class="needsclick">080-023-5454</a></strong>(수신자요금부담)<br>
+					운영시간 : 월요일~목요일 09:00~21:00 / <br>
+					금요일 09:00~17:30 (토/일/공휴일 휴무)
+				</p>
+			</div>
+
+			<div class="foot_cont">
+				<p>
+					㈜아모레퍼시픽 대표이사 : 심상배 <br>
+					전자메일주소 : apmall_support@amorepacificmall.com<br>
+					서울시 중구 청계천로 100 시그니쳐타워 서관 5~13층
+				</p>
+				<p>
+					호스팅제공자 : (주)아모레퍼시픽 / 사업자등록번호 : 107-86-43373<br>
+					통신판매업신고번호 : 서울중구-0408호(서울 중구청),<br>
+					건강기능식품판매업 영업신고증 제8호
+				</p>
+				<p>
+					고객님의 안전거래를 위해 현금 거래에 대해<br>
+					LG U+의 구매안전 서비스를 이용하실 수 있습니다.
+				</p>
+			</div>
+
+			<div class="btn_area">
+				<a href="#none" class="btn_lg">LG U+ 구매안전 서비스 가입확인</a>
+				<a href="#none" class="btn_cs">실시간 고객상담</a>
+			</div>
+
+			<ul class="foot_bot">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">사업자정보확인</a></li>
+			</ul>
+			<p class="copyright">&copy; AMOREPACIFIC CORPORATION ALL RIGHTS RESERVED</p>
+		</footer><!-- //FOOTER -->
+
+		<!-- BAR : FLOAT BOTTOM (해당 내용 확장 가능성 있음 - 상품상세 통합) -->
+		<div class="floatbar">
+			<!-- 퀵버튼 -->
+			<div class="quick">
+				<a href="#wrap" class="btn_top"><img src="../../images/renew/common/btn_top.png" alt="최상단으로 이동"></a>
+				<button type="button" class="btn_recent" onclick="modalPopup('#modalrecentLst');return false;"><img src="../../images/renew/temp/temp_prd_01.jpg" alt="상품명"></button>
+			</div><!-- //퀵버튼 -->
+
+			<!-- 상품상세 버튼 -->
+			<!--<div class="btnsbar">
+				<div><button type="button">장바구니</button></div>
+				<div><button type="button">구매하기</button></div>
+			</div>--><!-- //상품상세 버튼 -->
+
+			<!-- 컨트롤바 -->
+			<div class="ctrlbar">
+				<button type="button" class="btn_prev"><i class="i-global prev">이전 페이지</i></button>
+				<button type="button" class="btn_next disabled"><i class="i-global next">다음 페이지</i></button>
+				<button type="button" class="btn_like"><i class="i-global like">좋아요</i></button>
+				<button type="button" class="btn_my"><i class="i-global my">마이페이지</i></button>
+			</div><!-- 컨트롤바 -->
+		</div><!-- //BAR : FLOAT BOTTOM -->
+	</div><!-- WRAP -->
+</div><!-- WRAPPER -->
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/swipe.js"></script>
+<script type="text/javascript" src="../../js/iscroll.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript" src="../../js/select.js"></script>
+<script type="text/javascript" src="../../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="../../js/slick.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.lazyload.min.js?v=1.9.1"></script>
+<script type="text/javascript" src="../../js/jquery.scrollstop.min.js"></script>
+<script type="text/javascript" src="../../js/renew2017.js"></script><!-- 리뉴얼 js -->
+<script type="text/javascript">
+	/* 메인 배너 */
+	var mainBannerSwipe = new Swipe(document.getElementById('secMainBnnr'), {
+		auto : 4000,
+		continuous : true,
+		paginationType: 'fraction',
+		stopPropagation : true,
+		callback : function(event, element) {
+			if(event < 9){
+				var now_num = event+1;
+				$(".sec_mbnnr .current").text('0'+ now_num);
+			}else{
+				$(".sec_mbnnr .current").text(event+1);
+			}
+		}
+	});
+
+	/* 메인 배너 : pager */
+	var $tot = mainBannerSwipe.getNumSlides();
+	if($tot < 10){
+		$(".sec_mbnnr .total").text('0'+$tot);
+	}else{
+		$(".sec_mbnnr .total").text($tot);
+	}
+
+	/* 상품 스와이프 : 투데이 핫딜 */
+	var spotTodeal = $('#spotTodeal').slick({
+		centerMode: true,
+		centerPadding: '45px',
+		slidesToShow: 3,
+		arrows: false,
+		slidesToShow: 1
+	});
+
+	/* 상품 스와이프 : 스페셜기프트 */
+	var spotSpegift = $('#spotSpegift').slick({
+		centerMode: true,
+		centerPadding: '45px',
+		slidesToShow: 3,
+		arrows: false,
+		slidesToShow: 1
+	});
+
+	/* 상품 스와이프 : 투데이 핫딜 */
+	var spotPrice = $('#spotPrice').slick({
+		centerMode: true,
+		centerPadding: '45px',
+		slidesToShow: 3,
+		arrows: false,
+		slidesToShow: 1
+	});
+
+	/* list_timbest slide */
+	function list_timbest_sl() {
+		$('.list_timbest').find('ol').slick({
+			vertical:true,
+			slidesToShow:3,
+			slidesToScroll: 3,
+			autoplay: true,
+			autoplaySpeed:5000,
+			pager:false,
+			touchMove:false,
+			arrows: false
+		});
+	};list_timbest_sl();
+</script>
+</body>
+</html>
